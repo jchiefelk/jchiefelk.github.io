@@ -5,6 +5,7 @@ import Header from './header';
 import VideoBackground from './videobackground';
 import { Router, Route, Link } from 'react-router'
 import TimerMixin from 'react-timer-mixin';
+import '../css/main.css';
 
 
 class App extends Component {
@@ -64,9 +65,10 @@ class App extends Component {
         		<Header/>
                 <div style={{alignItems: 'center',justifyContent: 'center',display: 'flex',flexDirection: 'column'}}>
                     <div style={{position: 'absolute',top: 50, margin: 50}}>
-                        <p style={{color: 'white',fontSize: 64,fontWeight: 700, fontFamily: 'Courier New',textDecoration: 'none', marginTop: 5,alignItems: 'center',justifyContent: 'center',display: 'flex'}}>Full Stack Engineer</p> 
-                        <p style={{color: 'white',fontSize: 40,fontWeight: 700, fontFamily: 'Courier New',textDecoration: 'none', marginTop: 5,alignItems: 'center',justifyContent: 'center',display: 'flex'}}>{this.state.aboutMe1}</p>
-
+                        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
+                        <p id="Title">Full Stack Engineer</p> 
+                        <p id="About-Me">{this.state.aboutMe1}</p>
+                        </div>
                     </div>
                 </div>
                 <VideoBackground/>
