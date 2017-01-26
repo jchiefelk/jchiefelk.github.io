@@ -29,9 +29,9 @@
     "webpack": "^1.14.0"
   },
   "scripts": {
-    "build": "react-scripts build",
-    "start": "react-scripts start",
-    "prod_build": "webpack --config webpack.config.js",
-    "prod_start": "node server/app.js"
+    "dev_build": "react-scripts build",
+    "dev_start": "react-scripts start",
+    "build": "webpack --config webpack.config.js",
+    "start": "node server/app.js"
   }
 }
