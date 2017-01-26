@@ -1,0 +1,11 @@
+var appConstants = {
+  HTTPSTATUS: "HTTPSTATUS",
+  SAVE_CLICKED: "SAVE_CLICKED",
+  FIRSTNAME: "FIRSTNAME",
+  LASTNAME: "LASTNAME",
+  SUBJECTS: "SUBJECTS",
+  ABSTRACT: "ABSTRACT",
+  ARTICLE: "ARTICLE"
+
+};
+module.exports = appConstants;
