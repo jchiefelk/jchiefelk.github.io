@@ -6,7 +6,6 @@
   "devDependencies": {
     "react-scripts": "0.8.4"
   },
-
   "dependencies": {
     "babel": "^6.5.2",
     "babel-loader": "^6.2.10",
@@ -26,12 +25,13 @@
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.1",
     "react-router": "^3.0.0",
+    "react-timer-mixin": "^0.13.3",
     "webpack": "^1.14.0"
   },
   "scripts": {
-      "dev_build": "react-scripts build",
-      "dev_start": "react-scripts start",
-      "build": "webpack --config webpack.config.js",
-      "start": "node server/app.js"
+    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "prod_build": "webpack --config webpack.config.js",
+    "prod_start": "node server/app.js"
   }
 }

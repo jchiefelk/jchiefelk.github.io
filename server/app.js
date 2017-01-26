@@ -1,5 +1,4 @@
 // server/app.js
-var DatabaseTools = require('../modules/databasetools');
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
@@ -40,7 +39,7 @@ var allowCrossDomain = function(req, res, next) {
 app.get('/api', (req, res, next) => {	
 		authenticate( req.headers, res )
     	.then( () => {
-  				DatabaseTools.getPendingArticleData();
+  			
   		})
  		.catch( () => res.status( 500 ).json( { error: "auth fail" } ) );
 
@@ -51,7 +50,7 @@ app.post('/api', (req, res, next) => {
 	_store = req.body;
     authenticate( req.headers, res )
         .then(() => {
-            DatabaseTools.postPendingArticle(_store);
+
         })
         .catch( () => res.status( 500 ).json( { error: "auth fail" } ) );
 
