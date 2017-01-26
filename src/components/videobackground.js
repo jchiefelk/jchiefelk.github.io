@@ -7,8 +7,8 @@ class VideoBackground extends Component {
 
 			return (
 					<video id="background-video" loop autoPlay muted playsInline>
-					  <source src="https://s3-us-west-1.amazonaws.com/cointelmob/backgroundVideos/StandingRockHorseRiders2.mp4" type="video/mp4"/>
-					  <source src="https://s3-us-west-1.amazonaws.com/cointelmob/backgroundVideos/StandinRockHorseRiders2.webm" type="video/webm"/>
+					  <source src="https://s3-us-west-1.amazonaws.com/cointelmob/backgroundVideos/StandingRockHorseRiders.mp4" type="video/mp4"/>
+					  <source src="https://s3-us-west-1.amazonaws.com/cointelmob/backgroundVideos/StandinRockHorseRiders.webm" type="video/webm"/>
 					</video>
 			);
 	}

@@ -78443,7 +78443,7 @@
 					),
 					_react2.default.createElement(
 						'p',
-						{ style: { fontSize: 18, fontFamily: 'Courier New', color: 'white', position: 'absolute', right: window.innerWidth * 0.2, top: 15, cursor: 'pointer', textDecoration: 'none' } },
+						{ style: { fontSize: 18, fontFamily: 'Courier New', color: 'white', position: 'absolute', right: window.innerWidth * 0.2, top: 15, textDecoration: 'none' } },
 						'Portfolio'
 					)
 				);
@@ -93852,8 +93852,8 @@
 							return _react2.default.createElement(
 									'video',
 									{ id: 'background-video', loop: true, autoPlay: true, muted: true, playsInline: true },
-									_react2.default.createElement('source', { src: 'https://s3-us-west-1.amazonaws.com/cointelmob/backgroundVideos/StandingRockHorseRiders2.mp4', type: 'video/mp4' }),
-									_react2.default.createElement('source', { src: 'https://s3-us-west-1.amazonaws.com/cointelmob/backgroundVideos/StandinRockHorseRiders2.webm', type: 'video/webm' })
+									_react2.default.createElement('source', { src: 'https://s3-us-west-1.amazonaws.com/cointelmob/backgroundVideos/StandingRockHorseRiders.mp4', type: 'video/mp4' }),
+									_react2.default.createElement('source', { src: 'https://s3-us-west-1.amazonaws.com/cointelmob/backgroundVideos/StandinRockHorseRiders.webm', type: 'video/webm' })
 							);
 					}
 			}]);
@@ -94038,7 +94038,7 @@
 
 
 	// module
-	exports.push([module.id, "#Title {\n\tfont-size: 6em;\n\tcolor: white;\n\tfont-weight: 700; \n\tfont-family: 'Courier New';\n\ttext-decoration: 'none';\n\tmargin-top: 5;\n\talign-text: center;\n}\n\n#About-Me {\n\tcolor: white;\n\tfont-size: 3em;\n\tfont-weight: 700; \n\tfont-family: 'Courier New';\n\ttext-decoration: 'none';\n\tmargin-top: 5;\n}\n", ""]);
+	exports.push([module.id, "#Title {\n\tfont-size: 6em;\n\tcolor: black;\n\tfont-weight: 700; \n\tfont-family: 'Courier New';\n\ttext-decoration: 'none';\n\tmargin-top: 5;\n\talign-text: center;\n\ttext-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;\n}\n\n#About-Me {\n\n\tcolor: black;\n\tfont-size: 3em;\n\tfont-weight: 700; \n\tfont-family: 'Courier New';\n\ttext-decoration: 'none';\n\tmargin-top: 5;\n\ttext-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;\n}\n", ""]);
 
 	// exports
 

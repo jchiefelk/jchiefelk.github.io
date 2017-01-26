@@ -1,18 +1,21 @@
 #Title {
 	font-size: 6em;
-	color: white;
+	color: black;
 	font-weight: 700; 
 	font-family: 'Courier New';
 	text-decoration: 'none';
 	margin-top: 5;
 	align-text: center;
+	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
 
 #About-Me {
-	color: white;
+
+	color: black;
 	font-size: 3em;
 	font-weight: 700; 
 	font-family: 'Courier New';
 	text-decoration: 'none';
 	margin-top: 5;
+	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }

@@ -24,7 +24,7 @@ export default class Header extends Component {
 	    return (
 	      <div style={{display: 'flex', height: 50, backgroundColor: 'black', alignItems: 'center' }}>
 	      	<Link to="/" style={{fontSize: 18,fontFamily: 'Courier New',color: 'white', position: 'absolute', top: 15,left: 25, cursor: 'pointer', textDecoration: 'none'  }}>Jackson Chief Elk</Link>
-	      	<p  style={{fontSize: 18,fontFamily: 'Courier New' ,color: 'white', position: 'absolute', right: window.innerWidth*(0.2), top: 15, cursor: 'pointer', textDecoration: 'none' }}>Portfolio</p>
+	      	<p  style={{fontSize: 18,fontFamily: 'Courier New' ,color: 'white', position: 'absolute', right: window.innerWidth*(0.2), top: 15, textDecoration: 'none' }}>Portfolio</p>
 	      </div>
 	    );
 	}
