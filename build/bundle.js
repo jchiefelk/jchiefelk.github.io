@@ -26646,7 +26646,7 @@
 	                    iterator: _this2.state.iterator += 1,
 	                    start1: true
 	                });
-	            }, 100);
+	            }, 60);
 	        }
 	    }, {
 	        key: 'componentDidUpdate',
@@ -26659,7 +26659,7 @@
 	                        aboutMe1: _this3.state.aboutMe1 + _this3.aboutMe1.charAt(_this3.state.iterator),
 	                        iterator: _this3.state.iterator += 1
 	                    });
-	                }, 100);
+	                }, 60);
 	            }
 
 	            if (this.state.iterator == this.aboutMe1.length && this.state.start1 == true) {

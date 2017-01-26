@@ -32,7 +32,7 @@ class App extends Component {
                     start1: true
                 })
              },
-          100
+          60
          );
     }
     componentDidUpdate(){
@@ -45,7 +45,7 @@ class App extends Component {
                         iterator: this.state.iterator+=1
                     });
                },
-              100
+              60
              );
         } 
 
