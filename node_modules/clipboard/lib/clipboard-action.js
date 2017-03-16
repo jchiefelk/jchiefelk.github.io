@@ -116,7 +116,6 @@
                 this.fakeElem.style[isRTL ? 'right' : 'left'] = '-9999px';
                 // Move element to the same position vertically
                 var yPosition = window.pageYOffset || document.documentElement.scrollTop;
-                this.fakeElem.addEventListener('focus', window.scrollTo(0, yPosition));
                 this.fakeElem.style.top = yPosition + 'px';
 
                 this.fakeElem.setAttribute('readonly', '');

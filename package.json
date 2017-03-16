@@ -1,5 +1,5 @@
 {
-  "name": "cointelmob",
+  "name": "Portfolio",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://jchiefelk.github.io/",
@@ -9,6 +9,7 @@
   "dependencies": {
     "babel": "^6.5.2",
     "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.24.0",
     "bluebird": "^3.4.7",
     "cors": "^2.8.1",
     "draft-js": "^0.9.1",

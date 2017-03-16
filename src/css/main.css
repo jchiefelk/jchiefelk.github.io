@@ -1,4 +1,6 @@
-#Title {
+.Title {
+	position: absolute;
+	top: 1em;
 	font-size: 6em;
 	color: black;
 	font-weight: 700; 
@@ -9,13 +11,32 @@
 	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
 
-#About-Me {
-
+.About-Me {
+	position: absolute;
+	align-text: center;
+	top: 5em;
 	color: black;
+	width: 30em;
 	font-size: 3em;
 	font-weight: 700; 
 	font-family: 'Courier New';
 	text-decoration: 'none';
 	margin-top: 5;
 	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+.dashboard {
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+	flex-direction: column;
+}
+
+.box {
+
+	background-color: black;
+	color: black;
+	width: 3000;
+	height: 3000;
+	position: absolute;
 }
