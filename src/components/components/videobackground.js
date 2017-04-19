@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../css/videobackground.css';
+import '../css/main.css';
 
 class VideoBackground extends Component {
 

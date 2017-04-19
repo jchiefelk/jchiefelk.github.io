@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import TimerMixin from 'react-timer-mixin';
 import VideoBackground from './components/videobackground';
 let HTML = require('./jsx/html');
-import '../css/main.css';
+import './css/main.css';
 
 export default class Dashboard extends Component {
 	
@@ -12,6 +12,7 @@ export default class Dashboard extends Component {
             aboutMe: '' 
         };
     }
+
     componentDidMount(){
         this.setState({
                 aboutMe: HTML.renderAboutMe()
@@ -19,12 +20,10 @@ export default class Dashboard extends Component {
     }
 
     render() {
-
       return (
-            <div className="dashboard">
-      
-                      {this.state.aboutMe}
-                      <VideoBackground/>
+            <div style={{display: 'flex',justifyContent: 'center',flexDirection: 'column'}}>
+                {this.state.aboutMe}
+                <VideoBackground/>     
             </div>
       );
     }

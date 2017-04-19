@@ -62,7 +62,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_reactDom2.default.render(_react2.default.createElement(_routes2.default, { history: _reactRouter.browserHistory }), document.getElementById('root'));
+	_reactDom2.default.render(_react2.default.createElement(_routes2.default, { history: _reactRouter.hashHistory }), document.getElementById('root'));
 
 /***/ },
 /* 1 */
@@ -26586,7 +26586,7 @@
 
 	var _dashboard2 = _interopRequireDefault(_dashboard);
 
-	var _header = __webpack_require__(258);
+	var _header = __webpack_require__(256);
 
 	var _header2 = _interopRequireDefault(_header);
 
@@ -26614,7 +26614,7 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                { style: { alignItems: 'center' } },
+	                null,
 	                _react2.default.createElement(_header2.default, null),
 	                _react2.default.createElement(_dashboard2.default, null)
 	            );
@@ -26650,7 +26650,7 @@
 
 	var _videobackground2 = _interopRequireDefault(_videobackground);
 
-	__webpack_require__(242);
+	__webpack_require__(238);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26660,7 +26660,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var HTML = __webpack_require__(244);
+	var HTML = __webpack_require__(242);
 
 	var Dashboard = function (_Component) {
 	    _inherits(Dashboard, _Component);
@@ -26686,10 +26686,9 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
-
 	            return _react2.default.createElement(
 	                'div',
-	                { className: 'dashboard' },
+	                { style: { display: 'flex', justifyContent: 'center', flexDirection: 'column' } },
 	                this.state.aboutMe,
 	                _react2.default.createElement(_videobackground2.default, null)
 	            );
@@ -26931,8 +26930,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!./videobackground.css", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!./videobackground.css");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!./main.css", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!./main.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -26950,7 +26949,7 @@
 
 
 	// module
-	exports.push([module.id, "#background-video{\nposition: absloute;\ndisplay: flex;\n// height: 100%;\nwidth: 100%;\nfloat: left;\ntop: 0;\npadding: none;\n}\n", ""]);
+	exports.push([module.id, ".Title {\n\talign-items: center;\n\tposition: absolute;\n\ttop: 1em;\n\tfont-size: 4.5em;\n\tcolor: black;\n\tfont-weight: 700; \n\tfont-family: 'Courier New';\n\ttext-decoration: 'none';\n\tmargin-top: 5;\n\talign-text: center;\n\ttext-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;\n}\n\n.About-Me {\n\talign-items: center;\n\tposition: absolute;\n\talign-text: center;\n\ttop: 10em;\n\tcolor: black;\n\twidth: 30em;\n\tfont-size: 2.0em;\n\tfont-weight: 700; \n\tfont-family: 'Courier New';\n\ttext-decoration: 'none';\n\tmargin-top: 5;\n\ttext-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;\n}\n\n.dashboard {\n\tdisplay: flex;\n\tjustify-content: center; \n\tflex-direction: column;\t\n}\n\n.box {\n\n\tbackground-color: black;\n\tcolor: black;\n\twidth: 3000;\n\theight: 3000;\n\tposition: absolute;\n}\n\n#background-video{\n\theight: 100%;\n\twidth: 100%;\n\tpadding: none;\n\tmargin-top: -32em;\n\tdisplay: flex;\n}\n\n\n\n", ""]);
 
 	// exports
 
@@ -27267,46 +27266,6 @@
 /* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(243);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(241)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!./main.css", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!./main.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 243 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(240)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".Title {\n\tposition: absolute;\n\ttop: 1em;\n\tfont-size: 6em;\n\tcolor: black;\n\tfont-weight: 700; \n\tfont-family: 'Courier New';\n\ttext-decoration: 'none';\n\tmargin-top: 5;\n\talign-text: center;\n\ttext-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;\n}\n\n.About-Me {\n\tposition: absolute;\n\talign-text: center;\n\ttop: 5em;\n\tcolor: black;\n\twidth: 30em;\n\tfont-size: 3em;\n\tfont-weight: 700; \n\tfont-family: 'Courier New';\n\ttext-decoration: 'none';\n\tmargin-top: 5;\n\ttext-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;\n}\n\n.dashboard {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center; \n\tflex-direction: column;\n}\n\n.box {\n\n\tbackground-color: black;\n\tcolor: black;\n\twidth: 3000;\n\theight: 3000;\n\tposition: absolute;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 244 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -27315,11 +27274,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactAddonsCssTransitionGroup = __webpack_require__(245);
+	var _reactAddonsCssTransitionGroup = __webpack_require__(243);
 
 	var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
 
-	__webpack_require__(242);
+	__webpack_require__(238);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27333,11 +27292,11 @@
 				_createClass(HTML, [{
 							key: 'renderAboutMe',
 							value: function renderAboutMe() {
-										this.aboutme = "I'm deployed to Apple and Google Play App Stores, and Heroku.";
+										this.aboutme = "I've owned mobile development for an enterprize app deployed to the Apple and Google Play App Stores, Activily.  I'm also into performant stock market analysis, Web Security, and Machine Vision";
 
 										return _react2.default.createElement(
 													'div',
-													{ className: 'dashboard' },
+													{ style: { alignItems: 'center', justifyContent: 'center', display: 'flex', flexDirection: 'column' } },
 													_react2.default.createElement(
 																'p',
 																{ className: 'Title' },
@@ -27365,13 +27324,13 @@
 	module.exports = new HTML();
 
 /***/ },
-/* 245 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(246);
+	module.exports = __webpack_require__(244);
 
 /***/ },
-/* 246 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -27396,8 +27355,8 @@
 
 	var React = __webpack_require__(2);
 
-	var ReactTransitionGroup = __webpack_require__(247);
-	var ReactCSSTransitionGroupChild = __webpack_require__(250);
+	var ReactTransitionGroup = __webpack_require__(245);
+	var ReactCSSTransitionGroupChild = __webpack_require__(248);
 
 	function createTransitionTimeoutPropValidator(transitionType) {
 	  var timeoutPropName = 'transition' + transitionType + 'Timeout';
@@ -27480,7 +27439,7 @@
 	module.exports = ReactCSSTransitionGroup;
 
 /***/ },
-/* 247 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -27504,7 +27463,7 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var React = __webpack_require__(2);
-	var ReactTransitionChildMapping = __webpack_require__(248);
+	var ReactTransitionChildMapping = __webpack_require__(246);
 
 	var emptyFunction = __webpack_require__(12);
 
@@ -27713,7 +27672,7 @@
 	module.exports = ReactTransitionGroup;
 
 /***/ },
-/* 248 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -27728,7 +27687,7 @@
 
 	'use strict';
 
-	var flattenChildren = __webpack_require__(249);
+	var flattenChildren = __webpack_require__(247);
 
 	var ReactTransitionChildMapping = {
 	  /**
@@ -27821,7 +27780,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 249 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -27902,7 +27861,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 250 */
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -27918,10 +27877,10 @@
 	'use strict';
 
 	var React = __webpack_require__(2);
-	var ReactAddonsDOMDependencies = __webpack_require__(251);
+	var ReactAddonsDOMDependencies = __webpack_require__(249);
 
-	var CSSCore = __webpack_require__(256);
-	var ReactTransitionEvents = __webpack_require__(257);
+	var CSSCore = __webpack_require__(254);
+	var ReactTransitionEvents = __webpack_require__(255);
 
 	var onlyChild = __webpack_require__(31);
 
@@ -28073,7 +28032,7 @@
 	module.exports = ReactCSSTransitionGroupChild;
 
 /***/ },
-/* 251 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -28100,14 +28059,14 @@
 
 	  exports.getReactPerf = function () {
 	    if (!ReactPerf) {
-	      ReactPerf = __webpack_require__(252);
+	      ReactPerf = __webpack_require__(250);
 	    }
 	    return ReactPerf;
 	  };
 
 	  exports.getReactTestUtils = function () {
 	    if (!ReactTestUtils) {
-	      ReactTestUtils = __webpack_require__(253);
+	      ReactTestUtils = __webpack_require__(251);
 	    }
 	    return ReactTestUtils;
 	  };
@@ -28115,7 +28074,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 252 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -28621,7 +28580,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 253 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -28639,7 +28598,7 @@
 	var _prodInvariant = __webpack_require__(35),
 	    _assign = __webpack_require__(4);
 
-	var EventConstants = __webpack_require__(254);
+	var EventConstants = __webpack_require__(252);
 	var EventPluginHub = __webpack_require__(42);
 	var EventPluginRegistry = __webpack_require__(43);
 	var EventPropagators = __webpack_require__(41);
@@ -28650,7 +28609,7 @@
 	var ReactInstanceMap = __webpack_require__(116);
 	var ReactUpdates = __webpack_require__(56);
 	var SyntheticEvent = __webpack_require__(53);
-	var ReactShallowRenderer = __webpack_require__(255);
+	var ReactShallowRenderer = __webpack_require__(253);
 
 	var findDOMNode = __webpack_require__(172);
 	var invariant = __webpack_require__(8);
@@ -29038,7 +28997,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 254 */
+/* 252 */
 /***/ function(module, exports) {
 
 	/**
@@ -29134,7 +29093,7 @@
 	module.exports = EventConstants;
 
 /***/ },
-/* 255 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -29274,7 +29233,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 256 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -29401,7 +29360,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 257 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -29478,7 +29437,7 @@
 	module.exports = ReactTransitionEvents;
 
 /***/ },
-/* 258 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29539,16 +29498,26 @@
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					{ style: { display: 'flex', height: 50, backgroundColor: 'black', alignItems: 'center' } },
+					{ style: { display: 'flex', height: 500, backgroundColor: 'black', alignItems: 'center' } },
 					_react2.default.createElement(
 						_reactRouter.Link,
 						{ to: '/', style: { fontSize: 18, fontFamily: 'Courier New', color: 'white', position: 'absolute', top: 15, left: 25, cursor: 'pointer', textDecoration: 'none' } },
-						'Jackson Chief Elk'
+						'Jackson Chief Elk: '
 					),
 					_react2.default.createElement(
 						'a',
-						{ href: 'https://github.com/jchiefelk', style: { fontSize: 18, fontFamily: 'Courier New', color: 'white', position: 'absolute', right: window.innerWidth * 0.2, top: 15, textDecoration: 'none' } },
-						'Github'
+						{ href: 'http://node-quandl.herokuapp.com/', style: { fontSize: 13, fontFamily: 'Courier New', color: 'white', position: 'absolute', right: window.innerWidth * 0.6, top: 17, textDecoration: 'none' } },
+						'Stock Market Analysis'
+					),
+					_react2.default.createElement(
+						'a',
+						{ href: 'https://github.com/jchiefelk/pentesting', style: { fontSize: 13, fontFamily: 'Courier New', color: 'white', position: 'absolute', right: window.innerWidth * 0.4, top: 17, textDecoration: 'none' } },
+						'Pentesting'
+					),
+					_react2.default.createElement(
+						'a',
+						{ href: 'https://github.com/jchiefelk/pentesting', style: { fontSize: 13, fontFamily: 'Courier New', color: 'white', position: 'absolute', right: window.innerWidth * 0.2, top: 17, textDecoration: 'none' } },
+						'React-Flask'
 					)
 				);
 			}

@@ -7,7 +7,7 @@ class App extends Component {
 
     render() {
         return(
-        	<div style={{alignItems: 'center'}}> 
+        	<div> 
         		<Header/>
                 <Dashboard/>
             </div>

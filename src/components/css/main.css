@@ -1,7 +1,8 @@
 .Title {
+	align-items: center;
 	position: absolute;
 	top: 1em;
-	font-size: 6em;
+	font-size: 4.5em;
 	color: black;
 	font-weight: 700; 
 	font-family: 'Courier New';
@@ -12,12 +13,13 @@
 }
 
 .About-Me {
+	align-items: center;
 	position: absolute;
 	align-text: center;
-	top: 5em;
+	top: 10em;
 	color: black;
 	width: 30em;
-	font-size: 3em;
+	font-size: 2.0em;
 	font-weight: 700; 
 	font-family: 'Courier New';
 	text-decoration: 'none';
@@ -27,9 +29,8 @@
 
 .dashboard {
 	display: flex;
-	align-items: center;
 	justify-content: center; 
-	flex-direction: column;
+	flex-direction: column;	
 }
 
 .box {
@@ -40,3 +41,14 @@
 	height: 3000;
 	position: absolute;
 }
+
+#background-video{
+	height: 100%;
+	width: 100%;
+	padding: none;
+	margin-top: -32em;
+	display: flex;
+}
+
+
+
