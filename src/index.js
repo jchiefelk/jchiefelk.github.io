@@ -7,6 +7,6 @@ import {browserHistory,hashHistory} from 'react-router';
 
 
 ReactDOM.render(
-  <Routes history={hashHistory}/>,
+  <Routes history={browserHistory}/>,
   document.getElementById('root')
 );
