@@ -1,3 +1,12 @@
+
+.summary {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+}
+
 .Title {
 	align-items: center;
 	position: absolute;
@@ -11,6 +20,7 @@
 	align-text: center;
 	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
+
 
 .About-Me {
 	align-items: center;
@@ -46,8 +56,8 @@
 	height: 100%;
 	width: 100%;
 	padding: none;
-	margin-top: -32em;
 	display: flex;
+	background: transparent;
 }
 
 

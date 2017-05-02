@@ -22,8 +22,8 @@ export default class Dashboard extends Component {
     render() {
       return (
             <div style={{display: 'flex',justifyContent: 'center',flexDirection: 'column'}}>
-                {this.state.aboutMe}
-                <VideoBackground/>     
+                <VideoBackground/> 
+                {this.state.aboutMe}    
             </div>
       );
     }

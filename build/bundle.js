@@ -26614,7 +26614,7 @@
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
-	                null,
+	                { style: { display: 'flex', flexDirection: 'column' } },
 	                _react2.default.createElement(_header2.default, null),
 	                _react2.default.createElement(_dashboard2.default, null)
 	            );
@@ -26689,8 +26689,8 @@
 	            return _react2.default.createElement(
 	                'div',
 	                { style: { display: 'flex', justifyContent: 'center', flexDirection: 'column' } },
-	                this.state.aboutMe,
-	                _react2.default.createElement(_videobackground2.default, null)
+	                _react2.default.createElement(_videobackground2.default, null),
+	                this.state.aboutMe
 	            );
 	        }
 	    }]);
@@ -26834,11 +26834,8 @@
 
 			_this.index = 0;
 			_this.videosources = [{
-				mp4: "https://s3-us-west-1.amazonaws.com/cointelmob/backgroundVideos/StandingRockHorseRiders2.mp4",
-				webm: "https://s3-us-west-1.amazonaws.com/cointelmob/backgroundVideos/StandinRockHorseRiders2.webm"
-			}, {
-				mp4: "https://s3-us-west-1.amazonaws.com/cointelmob/backgroundVideos/StandingRockHorseRiders.mp4",
-				webm: "https://s3-us-west-1.amazonaws.com/cointelmob/backgroundVideos/StandinRockHorseRiders.webm"
+				mp4: "https://s3-us-west-1.amazonaws.com/cointelmob/backgroundVideos/bigwavebackground.mp4",
+				webm: "https://s3-us-west-1.amazonaws.com/cointelmob/backgroundVideos/bigwavebackground.webm"
 			}];
 
 			_this.state = {
@@ -26861,12 +26858,18 @@
 					webmsrc: this.videosources[0].webm,
 					view: _react2.default.createElement(
 						'video',
-						{ id: 'background-video', onEnded: function onEnded() {
+						{
+							id: 'background-video',
+							poster: 'https://www.lonelyplanet.com/travel-blog/tip-article/wordpress_uploads/2015/04/Lion-Rock-at-Piha-Beach.-Image-by-russellstreet-CC-BY-SA-2.0.jpg',
+							onEnded: function onEnded() {
 								_this2.setState({
 									ended: true,
 									view: null
 								});
-							}, autoPlay: true, muted: true },
+							},
+							playsinline: true,
+							autoPlay: true,
+							muted: true },
 						_react2.default.createElement('source', { src: this.videosources[this.index].mp4, type: 'video/mp4' }),
 						_react2.default.createElement('source', { src: this.videosources[this.index].webm, type: 'video/webm' })
 					)
@@ -26888,12 +26891,16 @@
 						ended: false,
 						view: _react2.default.createElement(
 							'video',
-							{ id: 'background-video', onEnded: function onEnded() {
+							{
+								id: 'background-video',
+								poster: 'https://www.lonelyplanet.com/travel-blog/tip-article/wordpress_uploads/2015/04/Lion-Rock-at-Piha-Beach.-Image-by-russellstreet-CC-BY-SA-2.0.jpg',
+								onEnded: function onEnded() {
 									_this3.setState({
 										ended: true,
 										view: null
 									});
-								}, autoPlay: true, muted: true },
+								},
+								autoPlay: true, muted: true },
 							_react2.default.createElement('source', { src: this.videosources[this.index].mp4, type: 'video/mp4' }),
 							_react2.default.createElement('source', { src: this.videosources[this.index].webm, type: 'video/webm' })
 						)
@@ -26949,7 +26956,7 @@
 
 
 	// module
-	exports.push([module.id, ".Title {\n\talign-items: center;\n\tposition: absolute;\n\ttop: 1em;\n\tfont-size: 4.5em;\n\tcolor: black;\n\tfont-weight: 700; \n\tfont-family: 'Courier New';\n\ttext-decoration: 'none';\n\tmargin-top: 5;\n\talign-text: center;\n\ttext-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;\n}\n\n.About-Me {\n\talign-items: center;\n\tposition: absolute;\n\talign-text: center;\n\ttop: 10em;\n\tcolor: black;\n\twidth: 30em;\n\tfont-size: 2.0em;\n\tfont-weight: 700; \n\tfont-family: 'Courier New';\n\ttext-decoration: 'none';\n\tmargin-top: 5;\n\ttext-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;\n}\n\n.dashboard {\n\tdisplay: flex;\n\tjustify-content: center; \n\tflex-direction: column;\t\n}\n\n.box {\n\n\tbackground-color: black;\n\tcolor: black;\n\twidth: 3000;\n\theight: 3000;\n\tposition: absolute;\n}\n\n#background-video{\n\theight: 100%;\n\twidth: 100%;\n\tpadding: none;\n\tmargin-top: -32em;\n\tdisplay: flex;\n}\n\n\n\n", ""]);
+	exports.push([module.id, "\n.summary {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tflex-direction: column;\n\n}\n\n.Title {\n\talign-items: center;\n\tposition: absolute;\n\ttop: 1em;\n\tfont-size: 4.5em;\n\tcolor: black;\n\tfont-weight: 700; \n\tfont-family: 'Courier New';\n\ttext-decoration: 'none';\n\tmargin-top: 5;\n\talign-text: center;\n\ttext-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;\n}\n\n\n.About-Me {\n\talign-items: center;\n\tposition: absolute;\n\talign-text: center;\n\ttop: 10em;\n\tcolor: black;\n\twidth: 30em;\n\tfont-size: 2.0em;\n\tfont-weight: 700; \n\tfont-family: 'Courier New';\n\ttext-decoration: 'none';\n\tmargin-top: 5;\n\ttext-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;\n}\n\n.dashboard {\n\tdisplay: flex;\n\tjustify-content: center; \n\tflex-direction: column;\t\n}\n\n.box {\n\n\tbackground-color: black;\n\tcolor: black;\n\twidth: 3000;\n\theight: 3000;\n\tposition: absolute;\n}\n\n#background-video{\n\theight: 100%;\n\twidth: 100%;\n\tpadding: none;\n\tdisplay: flex;\n\tbackground: transparent;\n}\n\n\n\n", ""]);
 
 	// exports
 
@@ -27285,40 +27292,55 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var HTML = function () {
-				function HTML() {
-							_classCallCheck(this, HTML);
-				}
+		function HTML() {
+			_classCallCheck(this, HTML);
+		}
 
-				_createClass(HTML, [{
-							key: 'renderAboutMe',
-							value: function renderAboutMe() {
-										this.aboutme = "I've owned mobile development for an enterprize app deployed to the Apple and Google Play App Stores, Activily.  I'm also into performant stock market analysis, Web Security, and Machine Vision";
+		_createClass(HTML, [{
+			key: 'renderAboutMe',
+			value: function renderAboutMe() {
+				return _react2.default.createElement(
+					'div',
+					{ className: 'summary' },
+					_react2.default.createElement(
+						'p',
+						{ className: 'Title' },
+						'Full Stack Engineer'
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'About-Me' },
+						_react2.default.createElement(
+							'p',
+							null,
+							'I\'ve have professional experience in...'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'1. Mobile Development'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'2. Full Stack Web Development'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'3. Security Testing'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'4. Augmented Reality'
+						)
+					)
+				);
+			}
+		}]);
 
-										return _react2.default.createElement(
-													'div',
-													{ style: { alignItems: 'center', justifyContent: 'center', display: 'flex', flexDirection: 'column' } },
-													_react2.default.createElement(
-																'p',
-																{ className: 'Title' },
-																'Full Stack Engineer'
-													),
-													_react2.default.createElement(
-																_reactAddonsCssTransitionGroup2.default,
-																{
-																			className: 'About-Me',
-																			transitionEnterTimeout: 5000,
-																			transitionLeaveTimeout: 0 },
-																_react2.default.createElement(
-																			'p',
-																			null,
-																			this.aboutme
-																)
-													)
-										);
-							}
-				}]);
-
-				return HTML;
+		return HTML;
 	}();
 
 	module.exports = new HTML();
@@ -29498,26 +29520,31 @@
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					{ style: { display: 'flex', height: 500, backgroundColor: 'black', alignItems: 'center' } },
+					{ style: { display: 'flex', height: 60, backgroundColor: 'black', alignItems: 'center' } },
 					_react2.default.createElement(
-						_reactRouter.Link,
-						{ to: '/', style: { fontSize: 18, fontFamily: 'Courier New', color: 'white', position: 'absolute', top: 15, left: 25, cursor: 'pointer', textDecoration: 'none' } },
-						'Jackson Chief Elk: '
+						'a',
+						{ href: 'http://jchiefelk.github.io/', style: { fontSize: 13, fontFamily: 'Courier New', color: 'white', position: 'absolute', top: 15, left: 25, cursor: 'pointer', textDecoration: 'none' } },
+						'Jackson Chief Elk '
 					),
 					_react2.default.createElement(
 						'a',
-						{ href: 'http://node-quandl.herokuapp.com/', style: { fontSize: 13, fontFamily: 'Courier New', color: 'white', position: 'absolute', right: window.innerWidth * 0.6, top: 17, textDecoration: 'none' } },
+						{ href: 'http://node-quandl.herokuapp.com/', style: { fontSize: 13, fontFamily: 'Courier New', color: 'white', position: 'absolute', right: window.innerWidth * 0.7, top: 17, textDecoration: 'none' } },
 						'Stock Market Analysis'
 					),
 					_react2.default.createElement(
 						'a',
-						{ href: 'https://github.com/jchiefelk/pentesting', style: { fontSize: 13, fontFamily: 'Courier New', color: 'white', position: 'absolute', right: window.innerWidth * 0.4, top: 17, textDecoration: 'none' } },
+						{ href: 'https://github.com/jchiefelk/pentesting', style: { fontSize: 13, fontFamily: 'Courier New', color: 'white', position: 'absolute', right: window.innerWidth * 0.5, top: 17, textDecoration: 'none' } },
 						'Pentesting'
 					),
 					_react2.default.createElement(
 						'a',
-						{ href: 'https://github.com/jchiefelk/pentesting', style: { fontSize: 13, fontFamily: 'Courier New', color: 'white', position: 'absolute', right: window.innerWidth * 0.2, top: 17, textDecoration: 'none' } },
+						{ href: 'https://github.com/jchiefelk/flask-react-form/', style: { fontSize: 13, fontFamily: 'Courier New', color: 'white', position: 'absolute', right: window.innerWidth * 0.3, top: 17, textDecoration: 'none' } },
 						'React-Flask'
+					),
+					_react2.default.createElement(
+						'a',
+						{ href: 'http://www.activily.com', style: { fontSize: 13, fontFamily: 'Courier New', color: 'white', position: 'absolute', right: window.innerWidth * 0.1, top: 17, textDecoration: 'none' } },
+						'Activily'
 					)
 				);
 			}
