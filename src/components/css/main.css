@@ -53,12 +53,10 @@
 }
 
 #background-video{
+	margin-top: -2em;
 	height: 100%;
 	width: 100%;
 	padding: none;
 	display: flex;
 	background: transparent;
 }
-
-
-
