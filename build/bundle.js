@@ -27318,7 +27318,7 @@
 						_react2.default.createElement(
 							'p',
 							null,
-							'1. Front & Mobile Development'
+							'1. Front End & Mobile Development'
 						),
 						_react2.default.createElement(
 							'p',
