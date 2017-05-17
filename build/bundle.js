@@ -27313,12 +27313,12 @@
 						_react2.default.createElement(
 							'p',
 							null,
-							'I\'ve have professional experience in...'
+							'I have experience in...'
 						),
 						_react2.default.createElement(
 							'p',
 							null,
-							'1. Front End & Mobile Development'
+							'1. Mobile Development'
 						),
 						_react2.default.createElement(
 							'p',
@@ -27328,22 +27328,22 @@
 						_react2.default.createElement(
 							'p',
 							null,
+							'3. Augmented Reality'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
 							'3. Security Testing'
 						),
 						_react2.default.createElement(
 							'p',
 							null,
-							'4. Augmented Reality'
+							'4. Performance Engineering'
 						),
 						_react2.default.createElement(
 							'p',
 							null,
-							'5. Data Visualization'
-						),
-						_react2.default.createElement(
-							'p',
-							null,
-							'6. Statistics'
+							'5. Data Visualization & Statistics'
 						)
 					)
 				);
