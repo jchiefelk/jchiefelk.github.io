@@ -11,12 +11,12 @@
 	align-items: center;
 	position: absolute;
 	top: 1em;
-	font-size: 4.5em;
+	font-size: 4.5vw;
 	color: black;
 	font-weight: 700; 
 	font-family: 'Courier New';
 	text-decoration: 'none';
-	margin-top: 5;
+	margin-top: 3em;
 	align-text: center;
 	text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
@@ -29,7 +29,7 @@
 	top: 10em;
 	color: black;
 	width: 30em;
-	font-size: 2.0em;
+	font-size: 2.9vw;
 	font-weight: 700; 
 	font-family: 'Courier New';
 	text-decoration: 'none';
