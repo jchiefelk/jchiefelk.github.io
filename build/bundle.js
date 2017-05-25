@@ -26880,12 +26880,9 @@
 			value: function componentDidUpdate() {
 				var _this3 = this;
 
-				if (this.state.ended == true) {
+				console.log(this.state.ended);
 
-					this.index += 1;
-					if (this.index == this.videosources.length) {
-						this.index = 0;
-					}
+				if (this.state.ended == true) {
 
 					this.setState({
 						ended: false,
@@ -26901,8 +26898,8 @@
 									});
 								},
 								autoPlay: true, muted: true },
-							_react2.default.createElement('source', { src: this.videosources[this.index].mp4, type: 'video/mp4' }),
-							_react2.default.createElement('source', { src: this.videosources[this.index].webm, type: 'video/webm' })
+							_react2.default.createElement('source', { src: this.videosources[0].mp4, type: 'video/mp4' }),
+							_react2.default.createElement('source', { src: this.videosources[0].webm, type: 'video/webm' })
 						)
 					});
 				}
@@ -26956,7 +26953,7 @@
 
 
 	// module
-	exports.push([module.id, "\n.summary {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tflex-direction: column;\n\n}\n\n.Title {\n\talign-items: center;\n\tposition: absolute;\n\ttop: 3em;\n\tfont-size: 4.5vw;\n\tcolor: black;\n\tfont-weight: 700; \n\tfont-family: 'Courier New';\n\ttext-decoration: 'none';\n\tmargin-top: 0.1em;\n\talign-text: center;\n\ttext-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;\n}\n\n\n.About-Me {\n\talign-items: center;\n\tposition: absolute;\n\talign-text: center;\n\ttop: 9em;\n\tcolor: black;\n\twidth: 30em;\n\tfont-size: 2.4vw;\n\tfont-weight: 700; \n\tfont-family: 'Courier New';\n\ttext-decoration: 'none';\n\tmargin-top: 0;\n\ttext-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;\n}\n\n.dashboard {\n\tdisplay: flex;\n\tjustify-content: center; \n\tflex-direction: column;\t\n}\n\n.box {\n\n\tbackground-color: black;\n\tcolor: black;\n\twidth: 3000;\n\theight: 3000;\n\tposition: absolute;\n}\n\n#background-video{\n\tmargin-top: -2em;\n\theight: 100%;\n\twidth: 100%;\n\tpadding: none;\n\tdisplay: flex;\n\tbackground: transparent;\n}", ""]);
+	exports.push([module.id, ".summary {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tflex-direction: column;\n}\n\n.Title {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tposition: absolute;\n\ttop: 3em;\n\tfont-size: 4.5vw;\n\tcolor: black;\n\tfont-weight: 700; \n\tfont-family: 'Avant Garde';\n\ttext-decoration: 'none';\n\tmargin-top: 0.1em;\n\talign-text: center;\n\ttext-shadow: 0.5px 0 0 #fff, -0.5px 0 0 #fff, 0 0.5px 0 #fff, 0 -0.5px 0 #fff, 0.5px 0.5px #fff, -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff;\n}\n\n.about-me-parent {\n\tdisplay: flex;\n\n\tflex-direction: column;\n\tposition: absolute;\n\ttop: 13em;\n\topacity: 0.7;\n\tbackground-color: Snow;\n\twidth: 80%;\n\tfont-size: 2.2vw;\n\tfont-family: 'Avant Garde';\n\tfont-weight: 500;\n\ttext-decoration: 'none';\n\tmargin-top: 0;\n}\n\n.about-me-child {\n\tfont-size: 1.7vw;\n\tcolor: blue;\n\tmargin-top: 1em;\n\tcursor: pointer;\n\ttext-decoration: none;\n}\n\n.dashboard {\n\tdisplay: flex;\n\tjustify-content: center; \n\tflex-direction: column;\t\n}\n\n.box {\n\tbackground-color: black;\n\tcolor: black;\n\twidth: 3000;\n\theight: 3000;\n\tposition: absolute;\n}\n\n#background-video{\n\tmargin-top: -2em;\n\theight: 100%;\n\twidth: 100%;\n\tpadding: none;\n\tdisplay: flex;\n\tbackground: transparent;\n}", ""]);
 
 	// exports
 
@@ -27303,47 +27300,46 @@
 					'div',
 					{ className: 'summary' },
 					_react2.default.createElement(
-						'p',
+						'div',
 						{ className: 'Title' },
 						'Full Stack Engineer'
 					),
 					_react2.default.createElement(
 						'div',
-						{ className: 'About-Me' },
+						{ className: 'about-me-parent' },
 						_react2.default.createElement(
-							'p',
-							null,
-							'I have experience in...'
+							'div',
+							{ style: { display: 'flex', alignItems: 'center', justifyContent: 'center' } },
+							_react2.default.createElement(
+								'p',
+								null,
+								'Visit the links below to see examples of my work'
+							)
 						),
 						_react2.default.createElement(
-							'p',
-							null,
-							'1. Mobile Development'
+							'a',
+							{ className: 'about-me-child', href: 'http://activily.com/' },
+							'Mobile Apps launched to Apple and Google Play App Stores'
 						),
 						_react2.default.createElement(
-							'p',
-							null,
-							'2. Full Stack Web Development'
+							'a',
+							{ className: 'about-me-child', href: 'https://node-quandl.herokuapp.com/' },
+							'Stock Analytics and Visualization'
 						),
 						_react2.default.createElement(
-							'p',
-							null,
-							'3. Augmented Reality'
+							'a',
+							{ className: 'about-me-child', href: 'https://www.youtube.com/watch?v=leHrdxnxjvA' },
+							'Augmented Reality'
 						),
 						_react2.default.createElement(
-							'p',
-							null,
-							'3. Security Testing'
+							'a',
+							{ className: 'about-me-child', href: 'https://www.youtube.com/watch?v=aY7nMQaw03s' },
+							'Machine Vision with OpenCV'
 						),
 						_react2.default.createElement(
-							'p',
-							null,
-							'4. Performance Engineering'
-						),
-						_react2.default.createElement(
-							'p',
-							null,
-							'5. Data Visualization & Statistics'
+							'a',
+							{ className: 'about-me-child', href: 'https://github.com/jchiefelk/pentesting' },
+							'Penetration Testing with Python'
 						)
 					)
 				);
@@ -29475,7 +29471,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-			value: true
+		value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -29497,96 +29493,86 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var Header = function (_Component) {
-			_inherits(Header, _Component);
+		_inherits(Header, _Component);
 
-			function Header() {
-					_classCallCheck(this, Header);
+		function Header() {
+			_classCallCheck(this, Header);
 
-					var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
+			var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
 
-					_this.state = {
-							width: window.innerWidth
-					};
-					return _this;
+			_this.state = {
+				width: window.innerWidth
+			};
+			return _this;
+		}
+
+		_createClass(Header, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				window.addEventListener('resize', this.handleResize.bind(this));
 			}
+		}, {
+			key: 'componentWillUnmount',
+			value: function componentWillUnmount() {
+				window.removeEventListener('resize', this.handleResize.bind(this));
+			}
+		}, {
+			key: 'handleResize',
+			value: function handleResize(e) {
+				this.setState({
+					windowWidth: window.innerWidth
+				});
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				// style={{backgroundColor: 'black', borderColor:'transparent', width: this.state.windowWidth }}
 
-			_createClass(Header, [{
-					key: 'componentDidMount',
-					value: function componentDidMount() {
-							window.addEventListener('resize', this.handleResize.bind(this));
-					}
-			}, {
-					key: 'componentWillUnmount',
-					value: function componentWillUnmount() {
-							window.removeEventListener('resize', this.handleResize.bind(this));
-					}
-			}, {
-					key: 'handleResize',
-					value: function handleResize(e) {
-							this.setState({
-									windowWidth: window.innerWidth
-							});
-					}
-			}, {
-					key: 'render',
-					value: function render() {
+				return _react2.default.createElement(
+					_reactBootstrap.Navbar,
+					{ inverse: true, collapseOnSelect: true, style: { backgroundColor: 'black', borderColor: 'transparent', width: this.state.windowWidth, fontSize: 14, fontFamily: 'Avante Garde', fontWeight: '500', color: 'white', cursor: 'pointer', textDecoration: 'none' } },
+					_react2.default.createElement(
+						_reactBootstrap.Navbar.Header,
+						null,
+						_react2.default.createElement(
+							_reactBootstrap.Navbar.Brand,
+							null,
+							_react2.default.createElement(
+								'a',
+								{ href: 'http://jchiefelk.github.io/' },
+								'Jackson Chief Elk '
+							)
+						),
+						_react2.default.createElement(_reactBootstrap.Navbar.Toggle, null)
+					),
+					_react2.default.createElement(
+						_reactBootstrap.Navbar.Collapse,
+						null,
+						_react2.default.createElement(
+							_reactBootstrap.Nav,
+							{ pullRight: true },
+							_react2.default.createElement(
+								_reactBootstrap.NavItem,
+								{ href: '#' },
+								'about'
+							),
+							_react2.default.createElement(
+								_reactBootstrap.NavItem,
+								{ href: '#' },
+								'work'
+							),
+							_react2.default.createElement(
+								_reactBootstrap.NavItem,
+								{ href: '#' },
+								'connect'
+							)
+						)
+					)
+				);
+			}
+		}]);
 
-							/*****
-	            <div style={{display: 'flex', height: 60, backgroundColor: 'black', alignItems: 'center' }}>
-	            	<a href="http://jchiefelk.github.io/" style={{fontSize: 13, fontFamily: 'Courier New',color: 'white', position: 'absolute', top: 15,left: 25, cursor: 'pointer', textDecoration: 'none'  }}>Jackson Chief Elk </a>
-	            	<a href="http://node-quandl.herokuapp.com/" style={{fontSize: 13,fontFamily: 'Courier New' ,color: 'white', position: 'absolute', right: window.innerWidth*(0.7), top: 17, textDecoration: 'none' }}>Stock Market Analysis</a>
-	            	<a href="https://github.com/jchiefelk/pentesting" style={{fontSize: 13,fontFamily: 'Courier New' ,color: 'white', position: 'absolute', right: window.innerWidth*(0.5), top: 17, textDecoration: 'none' }}>Pentesting</a>
-	              <a href="https://github.com/jchiefelk/flask-react-form/" style={{fontSize: 13,fontFamily: 'Courier New' ,color: 'white', position: 'absolute', right: window.innerWidth*(0.3), top: 17, textDecoration: 'none' }}>React-Flask</a>
-	            	<a href="http://www.activily.com" style={{fontSize: 13,fontFamily: 'Courier New' ,color: 'white', position: 'absolute', right: window.innerWidth*(0.1), top: 17, textDecoration: 'none' }}>Activily</a>
-	            </div>
-	      ****/
-
-							return _react2.default.createElement(
-									_reactBootstrap.Navbar,
-									{ inverse: true, collapseOnSelect: true, style: { backgroundColor: 'black', borderColor: 'transparent', width: this.state.windowWidth } },
-									_react2.default.createElement(
-											_reactBootstrap.Navbar.Header,
-											null,
-											_react2.default.createElement(
-													_reactBootstrap.Navbar.Brand,
-													null,
-													_react2.default.createElement(
-															'a',
-															{ href: 'http://jchiefelk.github.io/', style: { fontSize: 13, fontFamily: 'Courier New', color: 'white', cursor: 'pointer', textDecoration: 'none' } },
-															'Jackson Chief Elk '
-													)
-											),
-											_react2.default.createElement(_reactBootstrap.Navbar.Toggle, null)
-									),
-									_react2.default.createElement(
-											_reactBootstrap.Navbar.Collapse,
-											null,
-											_react2.default.createElement(
-													'a',
-													{ href: 'http://node-quandl.herokuapp.com/', style: { fontSize: 13, fontFamily: 'Courier New', color: 'white', position: 'absolute', right: window.innerWidth * 0.6, top: 17, textDecoration: 'none' } },
-													'Stock Market Analysis'
-											),
-											_react2.default.createElement(
-													'a',
-													{ href: 'https://github.com/jchiefelk/pentesting', style: { fontSize: 13, fontFamily: 'Courier New', color: 'white', position: 'absolute', right: window.innerWidth * 0.45, top: 17, textDecoration: 'none' } },
-													'Pentesting'
-											),
-											_react2.default.createElement(
-													'a',
-													{ href: 'https://github.com/jchiefelk/flask-react-form/', style: { fontSize: 13, fontFamily: 'Courier New', color: 'white', position: 'absolute', right: window.innerWidth * 0.3, top: 17, textDecoration: 'none' } },
-													'React-Flask'
-											),
-											_react2.default.createElement(
-													'a',
-													{ href: 'http://www.activily.com', style: { fontSize: 13, fontFamily: 'Courier New', color: 'white', position: 'absolute', right: window.innerWidth * 0.15, top: 17, textDecoration: 'none' } },
-													'Activily'
-											)
-									)
-							);
-					}
-			}]);
-
-			return Header;
+		return Header;
 	}(_react.Component);
 
 	exports.default = Header;

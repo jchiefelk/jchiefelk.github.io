@@ -9,18 +9,22 @@ class HTML {
 	renderAboutMe(){
 				return(
 				    <div className="summary"> 
-					    <p className="Title">Full Stack Engineer</p> 
-					   	
-					   	 <div className="About-Me">
-			       			<p>I have experience in...</p>
-			       			<p>1. Mobile Development</p>
-							<p>2. Full Stack Web Development</p>
-							<p>3. Augmented Reality</p>
-							<p>3. Security Testing</p>
-							<p>4. Performance Engineering</p>
-							<p>5. Data Visualization & Statistics</p>
-						</div>
 
+
+					    <div className="Title">Full Stack Engineer</div> 
+					   	
+					   	 <div className="about-me-parent">
+					   	 	<div style={{display: 'flex', alignItems:'center',justifyContent: 'center'}}>
+					   	 		<p>Visit the links below to see examples of my work</p>
+			       			
+			       			</div>
+
+			       			<a className="about-me-child" href="http://activily.com/">Mobile Apps launched to Apple and Google Play App Stores</a>
+							<a className="about-me-child" href="https://node-quandl.herokuapp.com/">Stock Analytics and Visualization</a>
+							<a className="about-me-child" href="https://www.youtube.com/watch?v=leHrdxnxjvA">Augmented Reality</a>
+							<a className="about-me-child" href="https://www.youtube.com/watch?v=aY7nMQaw03s">Machine Vision with OpenCV</a>
+							<a className="about-me-child" href="https://github.com/jchiefelk/pentesting">Penetration Testing with Python</a>
+						</div>
 				   </div>
 				);
 
