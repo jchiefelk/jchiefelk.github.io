@@ -62,7 +62,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	_reactDom2.default.render(_react2.default.createElement(_routes2.default, { history: _reactRouter.browserHistory }), document.getElementById('root'));
+	_reactDom2.default.render(_react2.default.createElement(_routes2.default, { history: _reactRouter.hashHistory }), document.getElementById('root'));
 
 /***/ },
 /* 1 */
@@ -26867,11 +26867,11 @@
 									view: null
 								});
 							},
-							playsinline: true,
+							playsInline: true,
 							autoPlay: true,
 							muted: true },
-						_react2.default.createElement('source', { src: this.videosources[this.index].mp4, type: 'video/mp4' }),
-						_react2.default.createElement('source', { src: this.videosources[this.index].webm, type: 'video/webm' })
+						_react2.default.createElement('source', { src: this.videosources[0].mp4, type: 'video/mp4' }),
+						_react2.default.createElement('source', { src: this.videosources[0].webm, type: 'video/webm' })
 					)
 				});
 			}
@@ -26880,9 +26880,12 @@
 			value: function componentDidUpdate() {
 				var _this3 = this;
 
-				console.log(this.state.ended);
-
 				if (this.state.ended == true) {
+
+					this.index += 1;
+					if (this.index == this.videosources.length) {
+						this.index = 0;
+					}
 
 					this.setState({
 						ended: false,
@@ -26897,9 +26900,12 @@
 										view: null
 									});
 								},
-								autoPlay: true, muted: true },
-							_react2.default.createElement('source', { src: this.videosources[0].mp4, type: 'video/mp4' }),
-							_react2.default.createElement('source', { src: this.videosources[0].webm, type: 'video/webm' })
+								playsInline: true,
+								autoPlay: true,
+								muted: true
+							},
+							_react2.default.createElement('source', { src: this.videosources[this.index].mp4, type: 'video/mp4' }),
+							_react2.default.createElement('source', { src: this.videosources[this.index].webm, type: 'video/webm' })
 						)
 					});
 				}
@@ -26953,7 +26959,7 @@
 
 
 	// module
-	exports.push([module.id, ".summary {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tflex-direction: column;\n}\n\n.Title {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tposition: absolute;\n\ttop: 3em;\n\tfont-size: 4.5vw;\n\tcolor: black;\n\tfont-weight: 700; \n\tfont-family: 'Avant Garde';\n\ttext-decoration: 'none';\n\tmargin-top: 0.1em;\n\talign-text: center;\n\ttext-shadow: 0.5px 0 0 #fff, -0.5px 0 0 #fff, 0 0.5px 0 #fff, 0 -0.5px 0 #fff, 0.5px 0.5px #fff, -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -0.5px 0.5px 0 #fff;\n}\n\n.about-me-parent {\n\tdisplay: flex;\n\n\tflex-direction: column;\n\tposition: absolute;\n\ttop: 13em;\n\topacity: 0.7;\n\tbackground-color: Snow;\n\twidth: 80%;\n\tfont-size: 2.2vw;\n\tfont-family: 'Avant Garde';\n\tfont-weight: 500;\n\ttext-decoration: 'none';\n\tmargin-top: 0;\n}\n\n.about-me-child {\n\tfont-size: 1.7vw;\n\tcolor: blue;\n\tmargin-top: 1em;\n\tcursor: pointer;\n\ttext-decoration: none;\n}\n\n.dashboard {\n\tdisplay: flex;\n\tjustify-content: center; \n\tflex-direction: column;\t\n}\n\n.box {\n\tbackground-color: black;\n\tcolor: black;\n\twidth: 3000;\n\theight: 3000;\n\tposition: absolute;\n}\n\n#background-video{\n\tmargin-top: -2em;\n\theight: 100%;\n\twidth: 100%;\n\tpadding: none;\n\tdisplay: flex;\n\tbackground: transparent;\n}", ""]);
+	exports.push([module.id, ".summary {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tflex-direction: column;\n}\n\n.Title {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tposition: absolute;\n\ttop: 3em;\n\tfont-size: 4.5vw;\n\tcolor: black;\n\tfont-family: 'Lora', serif;\n\ttext-decoration: 'none';\n\tmargin-top: 0.1em;\n\talign-text: center;\n\ttext-rendering: optimizeLegibility;\n}\n\n.about-me-parent {\n\tdisplay: flex;\n\tflex-direction: column;\n\tposition: absolute;\n\ttop: 13em;\n\tbackground-color: Snow;\n\twidth: 80%;\n\theight: 40%;\n\tfont-size: 2.2vw;\n\tfont-family: 'Lora', serif;\n\ttext-rendering: optimizeLegibility;\n\ttext-decoration: 'none';\n\tmargin-top: 0;\n\topacity: 0.6;\n}\n\n.about-me-child {\n\tmargin-left: 2em;\n\tfont-size: 1.7vw;\n\tcolor: blue;\n\tmargin-top: 1em;\n\tcursor: pointer;\n\ttext-decoration: none;\n}\n\n.dashboard {\n\tdisplay: flex;\n\tjustify-content: center; \n\tflex-direction: column;\t\n}\n\n.box {\n\tbackground-color: black;\n\tcolor: black;\n\twidth: 3000;\n\theight: 3000;\n\tposition: absolute;\n}\n\n#background-video{\n\tmargin-top: -2em;\n\theight: 100%;\n\twidth: 100%;\n\tpadding: none;\n\tdisplay: flex;\n\tbackground: transparent;\n}", ""]);
 
 	// exports
 
@@ -27309,22 +27315,22 @@
 						{ className: 'about-me-parent' },
 						_react2.default.createElement(
 							'div',
-							{ style: { display: 'flex', alignItems: 'center', justifyContent: 'center' } },
+							{ style: { display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'black' } },
 							_react2.default.createElement(
 								'p',
 								null,
-								'Visit the links below to see examples of my work'
+								'Visit thes links to see examples of my work in.'
 							)
 						),
 						_react2.default.createElement(
 							'a',
 							{ className: 'about-me-child', href: 'http://activily.com/' },
-							'Mobile Apps launched to Apple and Google Play App Stores'
+							'iOS & Android app on Apple and Google Play stores'
 						),
 						_react2.default.createElement(
 							'a',
 							{ className: 'about-me-child', href: 'https://node-quandl.herokuapp.com/' },
-							'Stock Analytics and Visualization'
+							'Stock market analytics and data visualization'
 						),
 						_react2.default.createElement(
 							'a',
@@ -29538,9 +29544,9 @@
 							_reactBootstrap.Navbar.Brand,
 							null,
 							_react2.default.createElement(
-								'a',
-								{ href: 'http://jchiefelk.github.io/' },
-								'Jackson Chief Elk '
+								_reactRouter.Link,
+								{ style: { textDecoration: 'none', color: 'white' } },
+								'Jackson Chief Elk'
 							)
 						),
 						_react2.default.createElement(_reactBootstrap.Navbar.Toggle, null)
@@ -29553,18 +29559,30 @@
 							{ pullRight: true },
 							_react2.default.createElement(
 								_reactBootstrap.NavItem,
-								{ href: '#' },
-								'about'
+								null,
+								_react2.default.createElement(
+									_reactRouter.Link,
+									{ style: { textDecoration: 'none', color: 'white' } },
+									'about'
+								)
 							),
 							_react2.default.createElement(
 								_reactBootstrap.NavItem,
-								{ href: '#' },
-								'work'
+								null,
+								_react2.default.createElement(
+									_reactRouter.Link,
+									{ style: { textDecoration: 'none', color: 'white' } },
+									'work'
+								)
 							),
 							_react2.default.createElement(
 								_reactBootstrap.NavItem,
-								{ href: '#' },
-								'connect'
+								null,
+								_react2.default.createElement(
+									_reactRouter.Link,
+									{ style: { textDecoration: 'none', color: 'white' } },
+									'connect'
+								)
 							)
 						)
 					)

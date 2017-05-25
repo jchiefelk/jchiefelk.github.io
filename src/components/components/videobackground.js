@@ -37,11 +37,11 @@ class VideoBackground extends Component {
 							view: null
 						}); 
 					}} 
-					playsinline
+					playsInline
 					autoPlay 
 					muted >
-					  <source src={this.videosources[this.index].mp4} type="video/mp4"/>
-					  <source src={this.videosources[this.index].webm} type="video/webm"/>
+					  <source src={this.videosources[0].mp4} type="video/mp4"/>
+					  <source src={this.videosources[0].webm} type="video/webm"/>
 				</video>
 				)
 		});
@@ -67,8 +67,11 @@ class VideoBackground extends Component {
 									ended: true, 
 									view: null
 								}); 
-						}} 
-						autoPlay muted >
+						}}
+						playsInline 
+						autoPlay 
+						muted 
+						>
 					  <source src={this.videosources[this.index].mp4} type="video/mp4"/>
 					  <source src={this.videosources[this.index].webm} type="video/webm"/>
 					</video>
@@ -78,7 +81,7 @@ class VideoBackground extends Component {
 	}
 
 	render() {
-		return (this.state.view);
+		return this.state.view;
 	}
 };
 
