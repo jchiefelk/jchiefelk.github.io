@@ -27330,7 +27330,7 @@
 						{ className: 'about-me-parent' },
 						_react2.default.createElement(
 							'div',
-							{ style: { display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'black' } },
+							{ style: { display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'black', marginTop: 30 } },
 							_react2.default.createElement(
 								'p',
 								null,
@@ -48814,7 +48814,7 @@
 								_react2.default.createElement(
 									'p',
 									null,
-									'I\u2019m a software developer located in Capitola, CA.  I have a background in biochemistry and biophysics, I originally wanted to make an impact being a professor, but while in grad school I was coding so much for my thesis project I started enjoying it more than the science, so I decided to pursue a career as a software developer. I first worked for an augmented startup called KinaTouch where I built a 3D playground for a Leap Motion accessory that we entered in the 2015 Monterey Bay startup challenge. After KinaTouch I joined another startup called Activily, a search application to find users a curated list of activities to do anywhere in the United States.'
+									'I\u2019m a software developer located in Capitola, CA.  I have a background in biochemistry and biophysics, I originally wanted to make an impact being a professor, but while in grad school I was coding so much for my thesis project I started enjoying and spending all my time doing it more than the science, so I decided to pursue a career as a software developer.'
 								),
 								_react2.default.createElement(
 									'h3',
