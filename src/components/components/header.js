@@ -38,9 +38,8 @@ export default class Header extends Component {
 
 			    <Navbar.Collapse>
 			    	<Nav pullRight>
-				    	<NavItem><Link style={{textDecoration: 'none', color: 'white'}}>about</Link></NavItem>
-		      			<NavItem><Link style={{textDecoration: 'none', color: 'white'}}>work</Link></NavItem>
-		        		<NavItem><Link style={{textDecoration: 'none', color: 'white'}}>connect</Link></NavItem>
+				    	<NavItem><Link to="about" style={{textDecoration: 'none', color: 'white'}}>about</Link></NavItem>
+		        		<NavItem><Link to="contact" style={{textDecoration: 'none', color: 'white'}}>connect</Link></NavItem>
 	        		</Nav>
 			    </Navbar.Collapse>
 			  

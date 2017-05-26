@@ -21518,13 +21518,28 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
+	var _about = __webpack_require__(508);
+
+	var _about2 = _interopRequireDefault(_about);
+
+	var _work = __webpack_require__(511);
+
+	var _work2 = _interopRequireDefault(_work);
+
+	var _contact = __webpack_require__(514);
+
+	var _contact2 = _interopRequireDefault(_contact);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Routes = function Routes(props) {
 	  return _react2.default.createElement(
 	    _reactRouter.Router,
 	    props,
-	    _react2.default.createElement(_reactRouter.Route, { path: '/', component: _App2.default })
+	    _react2.default.createElement(_reactRouter.Route, { path: '/', component: _App2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _about2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/work', component: _work2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: '/contact', component: _contact2.default })
 	  );
 	};
 	exports.default = Routes;
@@ -27319,7 +27334,7 @@
 							_react2.default.createElement(
 								'p',
 								null,
-								'Visit thes links to see examples of my work in.'
+								'Visit these links to see examples of my work.'
 							)
 						),
 						_react2.default.createElement(
@@ -29562,7 +29577,7 @@
 								null,
 								_react2.default.createElement(
 									_reactRouter.Link,
-									{ style: { textDecoration: 'none', color: 'white' } },
+									{ to: 'about', style: { textDecoration: 'none', color: 'white' } },
 									'about'
 								)
 							),
@@ -29571,16 +29586,7 @@
 								null,
 								_react2.default.createElement(
 									_reactRouter.Link,
-									{ style: { textDecoration: 'none', color: 'white' } },
-									'work'
-								)
-							),
-							_react2.default.createElement(
-								_reactBootstrap.NavItem,
-								null,
-								_react2.default.createElement(
-									_reactRouter.Link,
-									{ style: { textDecoration: 'none', color: 'white' } },
+									{ to: 'contact', style: { textDecoration: 'none', color: 'white' } },
 									'connect'
 								)
 							)
@@ -48692,6 +48698,529 @@
 	exports.bootstrapUtils = _bootstrapUtils;
 	exports.createChainedFunction = _createChainedFunction3['default'];
 	exports.ValidComponentChildren = _ValidComponentChildren3['default'];
+
+/***/ },
+/* 508 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _header = __webpack_require__(256);
+
+	var _header2 = _interopRequireDefault(_header);
+
+	var _reactRouter = __webpack_require__(179);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	__webpack_require__(509);
+
+	var About = function (_Component) {
+		_inherits(About, _Component);
+
+		function About() {
+			_classCallCheck(this, About);
+
+			return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
+		}
+
+		_createClass(About, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ style: { display: 'flex', flexDirection: 'column' } },
+					_react2.default.createElement(_header2.default, null),
+					_react2.default.createElement(
+						'div',
+						{ className: 'row' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'col-3 menu' },
+							_react2.default.createElement(
+								'ul',
+								null,
+								_react2.default.createElement(
+									'li',
+									{ style: { backgroundColor: 'black' } },
+									_react2.default.createElement(
+										'a',
+										{ style: { textDecoration: 'none', color: 'white' }, href: 'https://github.com/jchiefelk' },
+										'Github'
+									)
+								),
+								_react2.default.createElement(
+									'li',
+									{ style: { backgroundColor: 'black' } },
+									_react2.default.createElement(
+										'a',
+										{ style: { textDecoration: 'none', color: 'white' }, href: 'https://twitter.com/jchiefelk' },
+										'Twitter'
+									)
+								),
+								_react2.default.createElement(
+									'li',
+									{ style: { backgroundColor: 'black' } },
+									_react2.default.createElement(
+										'a',
+										{ style: { textDecoration: 'none', color: 'white' }, href: 'https://node-quandl.herokuapp.com/' },
+										'Stock Analysis'
+									)
+								)
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'col-6' },
+							_react2.default.createElement(
+								'h1',
+								null,
+								'Hello!'
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'I\'m a UI, Mobile, Backend, and Data Engineer'
+							),
+							_react2.default.createElement('img', { src: 'https://s3-us-west-2.amazonaws.com/jchiefelkportfolio/portrait.jpg', className: 'portrait' })
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'col-3 right' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'aside', style: { backgroundColor: 'black' } },
+								_react2.default.createElement(
+									'h3',
+									null,
+									'Quick Intro'
+								),
+								_react2.default.createElement(
+									'p',
+									null,
+									'I\u2019m a software developer located in Capitola, CA.  I have a background in biochemistry and biophysics, I originally wanted to make an impact being a professor, but while in grad school I was coding so much for my thesis project I started enjoying it more than the science, so I decided to pursue a career as a software developer. I first worked for an augmented startup called KinaTouch where I built a 3D playground for a Leap Motion accessory that we entered in the 2015 Monterey Bay startup challenge. After KinaTouch I joined another startup called Activily, a search application to find users a curated list of activities to do anywhere in the United States.'
+								),
+								_react2.default.createElement(
+									'h3',
+									null,
+									'My skills include'
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'HolyGrail' },
+									_react2.default.createElement(
+										'div',
+										{ className: 'HolyGrail-body' },
+										_react2.default.createElement(
+											'div',
+											{ className: 'HolyGrail-content' },
+											_react2.default.createElement(
+												'h5',
+												{ style: { color: 'red' } },
+												'UI'
+											),
+											_react2.default.createElement(
+												'h5',
+												{ style: { marginTop: 5 } },
+												'HTML/CSS3'
+											),
+											_react2.default.createElement(
+												'h5',
+												null,
+												'JavaScript'
+											),
+											_react2.default.createElement(
+												'h5',
+												null,
+												'React.js'
+											),
+											_react2.default.createElement(
+												'h5',
+												null,
+												'React-Native'
+											),
+											_react2.default.createElement(
+												'h5',
+												null,
+												'jQuery'
+											)
+										),
+										_react2.default.createElement(
+											'div',
+											{ className: 'HolyGrail-content' },
+											_react2.default.createElement(
+												'h5',
+												{ style: { color: 'red' } },
+												'Back-End'
+											),
+											_react2.default.createElement(
+												'h5',
+												{ style: { marginTop: 5 } },
+												'Node.js'
+											),
+											_react2.default.createElement(
+												'h5',
+												null,
+												'C++'
+											),
+											_react2.default.createElement(
+												'h5',
+												null,
+												'Python'
+											),
+											_react2.default.createElement(
+												'h5',
+												null,
+												'MySQL'
+											),
+											_react2.default.createElement(
+												'h5',
+												null,
+												'Flask'
+											),
+											_react2.default.createElement(
+												'h5',
+												null,
+												'Django'
+											)
+										)
+									)
+								)
+							)
+						)
+					)
+				);
+			}
+		}]);
+
+		return About;
+	}(_react.Component);
+
+	exports.default = About;
+
+/***/ },
+/* 509 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(510);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(241)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!./about.css", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!./about.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 510 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(240)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".portrait {\n\twidth: 100%;\n}\n\n.row::after {\n    content: \"\";\n    clear: both;\n    display: block;\n}\n[class*=\"col-\"] {\n    float: left;\n    padding: 15px;\n}\nhtml {\n    font-family: \"Lucida Sans\", sans-serif;\n}\n\n.menu ul {\n    list-style-type: none;\n    margin: 0;\n    padding: 0;\n}\n.menu li {\n\tcursor: pointer;\n    padding: 8px;\n    margin-bottom: 7px;\n    background-color: black;\n    color: #ffffff;\n    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n}\n\n.menu li:hover {\n    background-color: red;\n}\n\n.aside {\n    background-color: black;\n    padding: 15px;\n    color: #ffffff;\n    text-align: center;\n    font-size: 14px;\n    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n}\n\n/* For desktop: */\n.col-1 {width: 8.33%;}\n.col-2 {width: 16.66%;}\n.col-3 {\n\twidth: 25%;\n\n}\n.col-4 {width: 33.33%;}\n.col-5 {width: 41.66%;}\n.col-6 {width: 50%;}\n.col-7 {width: 58.33%;}\n.col-8 {width: 66.66%;}\n.col-9 {width: 75%;}\n.col-10 {width: 83.33%;}\n.col-11 {width: 91.66%;}\n.col-12 {width: 100%;}\n\n/*Skills responsive row*/\n.HolyGrail {\n  display: flex;\n  min-height: 100vh;\n  flex-direction: column;\n}\n\n.HolyGrail-body {\n  display: flex;\n  flex: 1;\n}\n\n.HolyGrail-content {\n  flex: 1;\n}\n\n.HolyGrail-nav, .HolyGrail-ads {\n  /* 12em is the width of the columns */\n  flex: 0 0 25em;\n}\n\n.HolyGrail-nav {\n  /* put the nav on the left */\n  order: -1;\n}\n\n.HolyGrail,\n.HolyGrail-body {\n  display: flex;\n  flex-direction: column;\n}\n\n.HolyGrail-nav {\n  order: -1;\n}\n\n@media (min-width: 1000px) {\n  .HolyGrail-body {\n    flex-direction: row;\n    flex: 1;\n  }\n  .HolyGrail-content {\n    flex: 1;\n  }\n  .HolyGrail-nav, .HolyGrail-ads {\n    /* 12em is the width of the columns */\n    flex: 0 0 12em;\n  }\n}\n\n@media only screen and (max-width: 768px) {\n    /* For mobile phones: */\n    [class*=\"col-\"] {\n        width: 100%;\n    }\n}", ""]);
+
+	// exports
+
+
+/***/ },
+/* 511 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _header = __webpack_require__(256);
+
+	var _header2 = _interopRequireDefault(_header);
+
+	var _reactRouter = __webpack_require__(179);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	__webpack_require__(512);
+
+	var Work = function (_Component) {
+		_inherits(Work, _Component);
+
+		function Work() {
+			_classCallCheck(this, Work);
+
+			return _possibleConstructorReturn(this, (Work.__proto__ || Object.getPrototypeOf(Work)).apply(this, arguments));
+		}
+
+		_createClass(Work, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ style: { display: 'flex', flexDirection: 'column' } },
+					_react2.default.createElement(_header2.default, null),
+					_react2.default.createElement(
+						'div',
+						{ className: 'header' },
+						_react2.default.createElement(
+							'h1',
+							null,
+							'Chania'
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'row' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'col-3 menu' },
+							_react2.default.createElement(
+								'ul',
+								null,
+								_react2.default.createElement(
+									'li',
+									null,
+									'The Flight'
+								),
+								_react2.default.createElement(
+									'li',
+									null,
+									'The City'
+								),
+								_react2.default.createElement(
+									'li',
+									null,
+									'The Island'
+								),
+								_react2.default.createElement(
+									'li',
+									null,
+									'The Food'
+								)
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'col-6' },
+							_react2.default.createElement(
+								'h1',
+								null,
+								'The City'
+							),
+							_react2.default.createElement(
+								'p',
+								null,
+								'Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'col-3 right' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'aside' },
+								_react2.default.createElement(
+									'h2',
+									null,
+									'What?'
+								),
+								_react2.default.createElement(
+									'p',
+									null,
+									'Chania is a city on the island of Crete.'
+								),
+								_react2.default.createElement(
+									'h2',
+									null,
+									'Where?'
+								),
+								_react2.default.createElement(
+									'p',
+									null,
+									'Crete is a Greek island in the Mediterranean Sea.'
+								),
+								_react2.default.createElement(
+									'h2',
+									null,
+									'How?'
+								),
+								_react2.default.createElement(
+									'p',
+									null,
+									'You can reach Chania airport from all over Europe.'
+								)
+							)
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'footer' },
+						_react2.default.createElement(
+							'p',
+							null,
+							'Resize the browser window to see how the content respond to the resizing.'
+						)
+					)
+				);
+			}
+		}]);
+
+		return Work;
+	}(_react.Component);
+
+	exports.default = Work;
+
+/***/ },
+/* 512 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(513);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(241)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!./workpage.css", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!./workpage.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 513 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(240)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "* {\n    box-sizing: border-box;\n}\n.row::after {\n    content: \"\";\n    clear: both;\n    display: block;\n}\n[class*=\"col-\"] {\n    float: left;\n    padding: 15px;\n}\nhtml {\n    font-family: \"Lucida Sans\", sans-serif;\n}\n.header {\n    background-color: #9933cc;\n    color: #ffffff;\n    padding: 15px;\n}\n.menu ul {\n    list-style-type: none;\n    margin: 0;\n    padding: 0;\n}\n.menu li {\n    padding: 8px;\n    margin-bottom: 7px;\n    background-color: #33b5e5;\n    color: #ffffff;\n    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n}\n.menu li:hover {\n    background-color: #0099cc;\n}\n.aside {\n    background-color: #33b5e5;\n    padding: 15px;\n    color: #ffffff;\n    text-align: center;\n    font-size: 14px;\n    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n}\n.footer {\n    background-color: #0099cc;\n    color: #ffffff;\n    text-align: center;\n    font-size: 12px;\n    padding: 15px;\n}\n/* For desktop: */\n.col-1 {width: 8.33%;}\n.col-2 {width: 16.66%;}\n.col-3 {width: 25%;}\n.col-4 {width: 33.33%;}\n.col-5 {width: 41.66%;}\n.col-6 {width: 50%;}\n.col-7 {width: 58.33%;}\n.col-8 {width: 66.66%;}\n.col-9 {width: 75%;}\n.col-10 {width: 83.33%;}\n.col-11 {width: 91.66%;}\n.col-12 {width: 100%;}\n\n@media only screen and (max-width: 768px) {\n    /* For mobile phones: */\n    [class*=\"col-\"] {\n        width: 100%;\n    }\n}", ""]);
+
+	// exports
+
+
+/***/ },
+/* 514 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _header = __webpack_require__(256);
+
+	var _header2 = _interopRequireDefault(_header);
+
+	var _reactRouter = __webpack_require__(179);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Contact = function (_Component) {
+		_inherits(Contact, _Component);
+
+		function Contact() {
+			_classCallCheck(this, Contact);
+
+			return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
+		}
+
+		_createClass(Contact, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					{ style: { display: 'flex', flexDirection: 'column' } },
+					_react2.default.createElement(_header2.default, null),
+					_react2.default.createElement(
+						'div',
+						{ style: { display: 'flex', flex: 1, alignItems: 'center', justifyContent: 'center', flexDirection: 'column' } },
+						_react2.default.createElement(
+							'p',
+							null,
+							'email - jchiefelk@gmail.com'
+						),
+						_react2.default.createElement(
+							'p',
+							null,
+							'phone - (831)-588-6504'
+						)
+					)
+				);
+			}
+		}]);
+
+		return Contact;
+	}(_react.Component);
+
+	exports.default = Contact;
 
 /***/ }
 /******/ ]);

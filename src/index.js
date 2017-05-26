@@ -5,7 +5,6 @@ import {hashHistory} from 'react-router';
 
 
 
-
 ReactDOM.render(
   <Routes history={hashHistory}/>,
   document.getElementById('root')

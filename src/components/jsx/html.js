@@ -9,13 +9,10 @@ class HTML {
 	renderAboutMe(){
 				return(
 				    <div className="summary"> 
-
-
 					    <div className="Title">Full Stack Engineer</div> 
-					   	
 					   	 <div className="about-me-parent">
 					   	 	<div style={{display: 'flex', alignItems:'center',justifyContent: 'center', color: 'black'}}>
-					   	 		<p>Visit thes links to see examples of my work in.</p>
+					   	 		<p>Visit these links to see examples of my work.</p>
 			       			</div>
 			       			<a className="about-me-child" href="http://activily.com/">iOS & Android app on Apple and Google Play stores</a>
 							<a className="about-me-child" href="https://node-quandl.herokuapp.com/">Stock market analytics and data visualization</a>
