@@ -23,8 +23,7 @@ export default class About extends Component {
 					</div>
 
 					<div className="col-6">
-					  <h1>Hello!</h1>
-					  <p>I'm a UI, Mobile, Backend, and Data Engineer</p>
+					  <h2>UI, Mobile, Backend, and Numerical Data Engineer</h2>
 					  <img src="https://s3-us-west-2.amazonaws.com/jchiefelkportfolio/portrait.jpg" className="portrait"/>
 					</div>
 
@@ -37,7 +36,7 @@ export default class About extends Component {
 						    	While in grad school I was spending all of my time coding for my thesis project, so much so that I enjoyed it 
 						    	more than the science, so I decided to pursue a career as a software developer.  I've worked for 2 startups
 						    	as a Mobile, Full Stack, and Augmented Reality Engineer.  On my spare time I like building out performant C++ addons for Node.js
-						    	to do Stock, Futures, and ETF Market Analysis.
+						    	to do Stock, Futures, and ETF market analysis.
 						    </p>
 
 						    <h3>My skills include</h3>
@@ -50,6 +49,7 @@ export default class About extends Component {
 								    	<h5>JavaScript</h5>
 								    	<h5>React.js</h5>
 								    	<h5>React-Native</h5>
+								    	<h5>openFrameworks</h5>
 								    	<h5>jQuery</h5>
 								    </div>
 								    <div className="HolyGrail-content">
