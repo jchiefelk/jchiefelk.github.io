@@ -26974,7 +26974,7 @@
 
 
 	// module
-	exports.push([module.id, ".summary {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tflex-direction: column;\n}\n\n.Title {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tposition: absolute;\n\ttop: 3em;\n\tfont-size: 4.5vw;\n\tcolor: black;\n\tfont-family: 'Lora', serif;\n\ttext-decoration: 'none';\n\tmargin-top: 0.1em;\n\talign-text: center;\n\ttext-rendering: optimizeLegibility;\n}\n\n.about-me-parent {\n\tdisplay: flex;\n\tflex-direction: column;\n\tposition: absolute;\n\ttop: 13em;\n\tbackground-color: Snow;\n\twidth: 80%;\n\theight: 40%;\n\tfont-size: 2.2vw;\n\tfont-family: 'Lora', serif;\n\ttext-rendering: optimizeLegibility;\n\ttext-decoration: 'none';\n\tmargin-top: 0;\n\topacity: 0.6;\n}\n\n.about-me-child {\n\tmargin-left: 2em;\n\tfont-size: 1.7vw;\n\tcolor: blue;\n\tmargin-top: 1em;\n\tcursor: pointer;\n\ttext-decoration: none;\n}\n\n.dashboard {\n\tdisplay: flex;\n\tjustify-content: center; \n\tflex-direction: column;\t\n}\n\n.box {\n\tbackground-color: black;\n\tcolor: black;\n\twidth: 3000;\n\theight: 3000;\n\tposition: absolute;\n}\n\n#background-video{\n\tmargin-top: -2em;\n\theight: 100%;\n\twidth: 100%;\n\tpadding: none;\n\tdisplay: flex;\n\tbackground: transparent;\n}", ""]);
+	exports.push([module.id, ".summary {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tflex-direction: column;\n}\n\n.Title {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tposition: absolute;\n\ttop: 3em;\n\tfont-size: 4.5vw;\n\tcolor: black;\n\tfont-family: 'Lora', serif;\n\ttext-decoration: 'none';\n\tmargin-top: 0.1em;\n\talign-text: center;\n\ttext-rendering: optimizeLegibility;\n}\n\n.about-me-parent {\n\tdisplay: flex;\n\tflex-direction: column;\n\tposition: absolute;\n\ttop: 13em;\n\tbackground-color: Snow;\n\twidth: 80%;\n\theight: 60%;\n\tfont-size: 2.2vw;\n\tfont-family: 'Lora', serif;\n\ttext-rendering: optimizeLegibility;\n\ttext-decoration: 'none';\n\tmargin-top: 0;\n\topacity: 0.6;\n}\n\n.about-me-child {\n\tmargin-left: 2em;\n\tfont-size: 1.7vw;\n\tcolor: blue;\n\tmargin-top: 1em;\n\tcursor: pointer;\n\ttext-decoration: none;\n}\n\n.dashboard {\n\tdisplay: flex;\n\tjustify-content: center; \n\tflex-direction: column;\t\n}\n\n.box {\n\tbackground-color: black;\n\tcolor: black;\n\twidth: 3000;\n\theight: 3000;\n\tposition: absolute;\n}\n\n#background-video{\n\tmargin-top: -2em;\n\theight: 100%;\n\twidth: 100%;\n\tpadding: none;\n\tdisplay: flex;\n\tbackground: transparent;\n}", ""]);
 
 	// exports
 
@@ -27345,17 +27345,17 @@
 						_react2.default.createElement(
 							'a',
 							{ className: 'about-me-child', href: 'https://node-quandl.herokuapp.com/' },
-							'Stock market analytics and data visualization'
+							'Stock, Futures, and ETF market analytics and data visualization'
 						),
 						_react2.default.createElement(
 							'a',
 							{ className: 'about-me-child', href: 'https://www.youtube.com/watch?v=leHrdxnxjvA' },
-							'Augmented Reality'
+							'Augmented Reality with a Leap Motion Controller'
 						),
 						_react2.default.createElement(
 							'a',
 							{ className: 'about-me-child', href: 'https://www.youtube.com/watch?v=aY7nMQaw03s' },
-							'Machine Vision with OpenCV'
+							'Machine Vision with OpenCV and C++'
 						),
 						_react2.default.createElement(
 							'a',
@@ -29560,7 +29560,7 @@
 							null,
 							_react2.default.createElement(
 								_reactRouter.Link,
-								{ style: { textDecoration: 'none', color: 'white' } },
+								{ to: '/', style: { textDecoration: 'none', color: 'white' } },
 								'Jackson Chief Elk'
 							)
 						),
@@ -48814,7 +48814,7 @@
 								_react2.default.createElement(
 									'p',
 									null,
-									'I\u2019m a software developer located in Capitola, CA.  I have a background in biochemistry and biophysics, I originally wanted to make an impact being a professor, but while in grad school I was coding so much for my thesis project I started enjoying and spending all my time doing it more than the science, so I decided to pursue a career as a software developer.'
+									'I\u2019m a software developer located in Capitola, CA.  I have a background in biochemistry and biophysics. While in grad school I was spending all of my time coding for my thesis project, so much so that I enjoyed it more than the science, so I decided to pursue a career as a software developer.  I\'ve worked for 2 startups as a Mobile, Full Stack, and Augmented Reality Engineer.  On my spare time I like building out performant C++ addons for Node.js to do Stock, Futures, and ETF Market Analysis.'
 								),
 								_react2.default.createElement(
 									'h3',

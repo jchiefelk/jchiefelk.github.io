@@ -31,7 +31,7 @@ export default class Header extends Component {
 			 <Navbar inverse collapseOnSelect style={{backgroundColor: 'black', borderColor:'transparent', width: this.state.windowWidth , fontSize: 14, fontFamily: 'Avante Garde',fontWeight: '500',color: 'white', cursor: 'pointer', textDecoration: 'none' }}>
 			    <Navbar.Header>
 				     <Navbar.Brand>
-				    	<Link style={{textDecoration: 'none', color: 'white'}}>Jackson Chief Elk</Link>
+				    	<Link to="/" style={{textDecoration: 'none', color: 'white'}}>Jackson Chief Elk</Link>
 				     </Navbar.Brand>
 			      <Navbar.Toggle />
 			    </Navbar.Header>

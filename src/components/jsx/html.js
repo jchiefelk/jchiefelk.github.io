@@ -17,9 +17,9 @@ class HTML {
 			       			</div>
 
 			       			<a className="about-me-child" href="http://activily.com/">iOS & Android app on Apple and Google Play stores</a>
-							<a className="about-me-child" href="https://node-quandl.herokuapp.com/">Stock market analytics and data visualization</a>
-							<a className="about-me-child" href="https://www.youtube.com/watch?v=leHrdxnxjvA">Augmented Reality</a>
-							<a className="about-me-child" href="https://www.youtube.com/watch?v=aY7nMQaw03s">Machine Vision with OpenCV</a>
+							<a className="about-me-child" href="https://node-quandl.herokuapp.com/">Stock, Futures, and ETF market analytics and data visualization</a>
+							<a className="about-me-child" href="https://www.youtube.com/watch?v=leHrdxnxjvA">Augmented Reality with a Leap Motion Controller</a>
+							<a className="about-me-child" href="https://www.youtube.com/watch?v=aY7nMQaw03s">Machine Vision with OpenCV and C++</a>
 							<a className="about-me-child" href="https://github.com/jchiefelk/pentesting">Penetration Testing with Python</a>
 						</div>
 				   </div>

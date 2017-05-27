@@ -33,10 +33,11 @@ export default class About extends Component {
 						    
 						    <h3>Quick Intro</h3>
 						    <p>
-						    	I’m a software developer located in Capitola, CA.  I have a background in biochemistry and biophysics, 
-						    	I originally wanted to make an impact being a professor, 
-						    	but while in grad school I was coding so much for my thesis project I started enjoying and spending all my time
-						    	doing it more than the science, so I decided to pursue a career as a software developer.  
+						    	I’m a software developer located in Capitola, CA.  I have a background in biochemistry and biophysics. 
+						    	While in grad school I was spending all of my time coding for my thesis project, so much so that I enjoyed it 
+						    	more than the science, so I decided to pursue a career as a software developer.  I've worked for 2 startups
+						    	as a Mobile, Full Stack, and Augmented Reality Engineer.  On my spare time I like building out performant C++ addons for Node.js
+						    	to do Stock, Futures, and ETF Market Analysis.
 						    </p>
 
 						    <h3>My skills include</h3>
