@@ -21518,15 +21518,15 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _about = __webpack_require__(508);
+	var _about = __webpack_require__(509);
 
 	var _about2 = _interopRequireDefault(_about);
 
-	var _work = __webpack_require__(511);
+	var _work = __webpack_require__(512);
 
 	var _work2 = _interopRequireDefault(_work);
 
-	var _contact = __webpack_require__(514);
+	var _contact = __webpack_require__(515);
 
 	var _contact2 = _interopRequireDefault(_contact);
 
@@ -26605,6 +26605,10 @@
 
 	var _header2 = _interopRequireDefault(_header);
 
+	var _footer = __webpack_require__(508);
+
+	var _footer2 = _interopRequireDefault(_footer);
+
 	var _reactRouter = __webpack_require__(179);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -26631,7 +26635,8 @@
 	                'div',
 	                { style: { display: 'flex', flexDirection: 'column' } },
 	                _react2.default.createElement(_header2.default, null),
-	                _react2.default.createElement(_dashboard2.default, null)
+	                _react2.default.createElement(_dashboard2.default, null),
+	                _react2.default.createElement(_footer2.default, null)
 	            );
 	        }
 	    }]);
@@ -48715,6 +48720,83 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(179);
+
+	var _reactBootstrap = __webpack_require__(257);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Footer = function (_Component) {
+		_inherits(Footer, _Component);
+
+		function Footer() {
+			_classCallCheck(this, Footer);
+
+			var _this = _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).call(this));
+
+			_this.state = {
+				width: window.innerWidth
+			};
+			return _this;
+		}
+
+		_createClass(Footer, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				window.addEventListener('resize', this.handleResize.bind(this));
+			}
+		}, {
+			key: 'componentWillUnmount',
+			value: function componentWillUnmount() {
+				window.removeEventListener('resize', this.handleResize.bind(this));
+			}
+		}, {
+			key: 'handleResize',
+			value: function handleResize(e) {
+				this.setState({
+					windowWidth: window.innerWidth
+				});
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				// style={{backgroundColor: 'black', borderColor:'transparent', width: this.state.windowWidth }}
+
+				return _react2.default.createElement(
+					'div',
+					{ style: { display: 'flex', height: 50, color: 'black', alignItems: 'center', justifyContent: 'center' } },
+					'\xA9 Jackson Chief Elk'
+				);
+			}
+		}]);
+
+		return Footer;
+	}(_react.Component);
+
+	exports.default = Footer;
+
+/***/ },
+/* 509 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
 	var _header = __webpack_require__(256);
 
 	var _header2 = _interopRequireDefault(_header);
@@ -48729,7 +48811,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	__webpack_require__(509);
+	__webpack_require__(510);
 
 	var About = function (_Component) {
 		_inherits(About, _Component);
@@ -48789,14 +48871,9 @@
 							'div',
 							{ className: 'col-6' },
 							_react2.default.createElement(
-								'h1',
+								'h2',
 								null,
-								'Hello!'
-							),
-							_react2.default.createElement(
-								'p',
-								null,
-								'I\'m a UI, Mobile, Backend, and Data Engineer'
+								'UI, Mobile, Backend, and Numerical Data Engineer'
 							),
 							_react2.default.createElement('img', { src: 'https://s3-us-west-2.amazonaws.com/jchiefelkportfolio/portrait.jpg', className: 'portrait' })
 						),
@@ -48814,7 +48891,7 @@
 								_react2.default.createElement(
 									'p',
 									null,
-									'I\u2019m a software developer located in Capitola, CA.  I have a background in biochemistry and biophysics. While in grad school I was spending all of my time coding for my thesis project, so much so that I enjoyed it more than the science, so I decided to pursue a career as a software developer.  I\'ve worked for 2 startups as a Mobile, Full Stack, and Augmented Reality Engineer.  On my spare time I like building out performant C++ addons for Node.js to do Stock, Futures, and ETF Market Analysis.'
+									'I\u2019m a software developer located in Capitola, CA.  I have a background in biochemistry and biophysics. While in grad school I was spending all of my time coding for my thesis project, so much so that I enjoyed it more than the science, so I decided to pursue a career as a software developer.  I\'ve worked for 2 startups as a Mobile, Full Stack, and Augmented Reality Engineer.  On my spare time I like building out performant C++ addons for Node.js to do Stock, Futures, and ETF market analysis.'
 								),
 								_react2.default.createElement(
 									'h3',
@@ -48854,6 +48931,11 @@
 												'h5',
 												null,
 												'React-Native'
+											),
+											_react2.default.createElement(
+												'h5',
+												null,
+												'openFrameworks'
 											),
 											_react2.default.createElement(
 												'h5',
@@ -48915,13 +48997,13 @@
 	exports.default = About;
 
 /***/ },
-/* 509 */
+/* 510 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(510);
+	var content = __webpack_require__(511);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(241)(content, {});
@@ -48941,7 +49023,7 @@
 	}
 
 /***/ },
-/* 510 */
+/* 511 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(240)();
@@ -48955,7 +49037,7 @@
 
 
 /***/ },
-/* 511 */
+/* 512 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48984,7 +49066,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	__webpack_require__(512);
+	__webpack_require__(513);
 
 	var Work = function (_Component) {
 		_inherits(Work, _Component);
@@ -49114,13 +49196,13 @@
 	exports.default = Work;
 
 /***/ },
-/* 512 */
+/* 513 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(513);
+	var content = __webpack_require__(514);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(241)(content, {});
@@ -49140,7 +49222,7 @@
 	}
 
 /***/ },
-/* 513 */
+/* 514 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(240)();
@@ -49154,7 +49236,7 @@
 
 
 /***/ },
-/* 514 */
+/* 515 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
