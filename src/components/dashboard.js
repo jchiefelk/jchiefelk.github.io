@@ -5,28 +5,16 @@ let HTML = require('./jsx/html');
 import './css/main.css';
 
 export default class Dashboard extends Component {
-	
     constructor(){
         super();
-        this.state = {
-            aboutMe: '' 
-        };
-    }
-
-    componentDidMount(){
-        this.setState({
-                aboutMe: HTML.renderAboutMe()
-        });
     }
 
     render() {
       return (
             <div style={{justifyContent: 'center',flexDirection: 'column'}}>
                 <VideoBackground/> 
-                {this.state.aboutMe}    
+                {HTML.renderAboutMe()}    
             </div>
       );
     }
-
-
 }

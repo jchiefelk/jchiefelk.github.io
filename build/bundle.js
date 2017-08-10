@@ -26688,29 +26688,17 @@
 	    function Dashboard() {
 	        _classCallCheck(this, Dashboard);
 
-	        var _this = _possibleConstructorReturn(this, (Dashboard.__proto__ || Object.getPrototypeOf(Dashboard)).call(this));
-
-	        _this.state = {
-	            aboutMe: ''
-	        };
-	        return _this;
+	        return _possibleConstructorReturn(this, (Dashboard.__proto__ || Object.getPrototypeOf(Dashboard)).call(this));
 	    }
 
 	    _createClass(Dashboard, [{
-	        key: 'componentDidMount',
-	        value: function componentDidMount() {
-	            this.setState({
-	                aboutMe: HTML.renderAboutMe()
-	            });
-	        }
-	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
 	                { style: { justifyContent: 'center', flexDirection: 'column' } },
 	                _react2.default.createElement(_videobackground2.default, null),
-	                this.state.aboutMe
+	                HTML.renderAboutMe()
 	            );
 	        }
 	    }]);
@@ -26979,7 +26967,7 @@
 
 
 	// module
-	exports.push([module.id, ".summary {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tflex-direction: column;\n}\n\n.Title {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tposition: absolute;\n\ttop: 3em;\n\tfont-size: 4.5vw;\n\tcolor: black;\n\tfont-family: 'Lora', serif;\n\ttext-decoration: 'none';\n\tmargin-top: 0.1em;\n\talign-text: center;\n\ttext-rendering: optimizeLegibility;\n}\n\n.about-me-parent {\n\tdisplay: flex;\n\tflex-direction: column;\n\tposition: absolute;\n\ttop: 13em;\n\tbackground-color: Snow;\n\twidth: 80%;\n\theight: 60%;\n\tfont-size: 2.2vw;\n\tfont-family: 'Lora', serif;\n\ttext-rendering: optimizeLegibility;\n\ttext-decoration: 'none';\n\tmargin-top: 0;\n\topacity: 0.6;\n}\n\n.about-me-child {\n\tmargin-left: 2em;\n\tfont-size: 1.7vw;\n\tcolor: blue;\n\tmargin-top: 1em;\n\tcursor: pointer;\n\ttext-decoration: none;\n}\n\n.dashboard {\n\tdisplay: flex;\n\tjustify-content: center; \n\tflex-direction: column;\t\n}\n\n.box {\n\tbackground-color: black;\n\tcolor: black;\n\twidth: 3000;\n\theight: 3000;\n\tposition: absolute;\n}\n\n#background-video{\n\tmargin-top: -2em;\n\theight: 100%;\n\twidth: 100%;\n\tpadding: none;\n\tdisplay: flex;\n\tbackground: transparent;\n}", ""]);
+	exports.push([module.id, ".summary {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tflex-direction: column;\n}\n\n.Title {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tposition: absolute;\n\ttop: 3em;\n\tfont-size: 4.5vw;\n\tcolor: black;\n\tfont-family: 'Lora', serif;\n\ttext-decoration: 'none';\n\tmargin-top: 0.1em;\n\talign-text: center;\n\ttext-rendering: optimizeLegibility;\n}\n\n.about-me-parent {\n\tdisplay: flex;\n\tflex-direction: column;\n\tposition: absolute;\n\ttop: 10em;\n\tbackground-color: Snow;\n\twidth: 80%;\n\theight: 60%;\n\tfont-size: 2.2vw;\n\tfont-family: 'Lora', serif;\n\ttext-rendering: optimizeLegibility;\n\ttext-decoration: 'none';\n\tmargin-top: 0;\n\topacity: 0.6;\n}\n\n.about-me-child {\n\tmargin-left: 2em;\n\tfont-size: 1.7vw;\n\tcolor: blue;\n\tmargin-top: 1em;\n\tcursor: pointer;\n\ttext-decoration: none;\n}\n\n.dashboard {\n\tdisplay: flex;\n\tjustify-content: center; \n\tflex-direction: column;\t\n}\n\n.box {\n\tbackground-color: black;\n\tcolor: black;\n\twidth: 3000;\n\theight: 3000;\n\tposition: absolute;\n}\n\n#background-video{\n\tmargin-top: -2em;\n\theight: 100%;\n\twidth: 100%;\n\tpadding: none;\n\tdisplay: flex;\n\tbackground: transparent;\n}", ""]);
 
 	// exports
 
@@ -27366,6 +27354,21 @@
 							'a',
 							{ className: 'about-me-child', href: 'https://github.com/jchiefelk/pentesting' },
 							'Penetration Testing with Python'
+						),
+						_react2.default.createElement(
+							'a',
+							{ className: 'about-me-child', href: 'https://www.youtube.com/watch?v=xVQuBaHheUo' },
+							'Physics-Based atomic simulation of human membrane protein'
+						),
+						_react2.default.createElement(
+							'a',
+							{ className: 'about-me-child', href: 'http://science.sciencemag.org/content/335/6072/1055/F1' },
+							'Editorial I co-authored in Science'
+						),
+						_react2.default.createElement(
+							'a',
+							{ className: 'about-me-child', href: 'http://pubs.acs.org/doi/abs/10.1021/acs.langmuir.5b01025?journalCode=langd5' },
+							'Research article I published in a materials science journal called Langmuir'
 						)
 					)
 				);
@@ -29552,7 +29555,6 @@
 		}, {
 			key: 'render',
 			value: function render() {
-				// style={{backgroundColor: 'black', borderColor:'transparent', width: this.state.windowWidth }}
 
 				return _react2.default.createElement(
 					_reactBootstrap.Navbar,

@@ -24,7 +24,7 @@ export default class Header extends Component {
 	    });
    	}
 	render() {
-		// style={{backgroundColor: 'black', borderColor:'transparent', width: this.state.windowWidth }}
+
 
 	    return (
 
