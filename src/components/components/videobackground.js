@@ -6,12 +6,7 @@ class VideoBackground extends Component {
 	constructor(){
 		super();
 			this.index = 0;
-			this.videosources = [
-					{
-						mp4: "https://s3-us-west-1.amazonaws.com/cointelmob/backgroundVideos/bigwavebackground.mp4",
-						webm: "https://s3-us-west-1.amazonaws.com/cointelmob/backgroundVideos/bigwavebackground.webm"
-					}
-			];
+
 
 			this.state ={
 				mp4src: null,
@@ -23,7 +18,7 @@ class VideoBackground extends Component {
 	}
 
 	componentDidMount(){
-
+		/**
 		this.setState({
 				mp4src: this.videosources[0].mp4,
 				webmsrc: this.videosources[0].webm,
@@ -45,10 +40,12 @@ class VideoBackground extends Component {
 				</video>
 				)
 		});
+		***/
 	}
 
 	componentDidUpdate(){
-
+	
+		/***
 		if(this.state.ended==true){
 			
 			this.index+=1;
@@ -78,11 +75,35 @@ class VideoBackground extends Component {
 				)
 			});
 		}
+		***/
+	}
+
+
+	renderVideoBackground() {
+		// 
+		return(
+				<video 
+					id="background-video" 
+
+					onEnded={()=> {
+						this.setState({
+							ended: true, 
+							view: null
+						}); 
+					}} 
+					playsInline
+					autoPlay 
+					muted>
+					  <source src={'https://giphy.com/gifs/LukAHGCMfxMbK/html5'} />
+				</video>
+		);
 	}
 
 	render() {
-		return this.state.view;
+		return this.renderVideoBackground();
 	}
+
+
 };
 
 export default VideoBackground;

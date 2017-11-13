@@ -1,7 +1,5 @@
 import React, {  Component } from 'react';
 import { Router, Route, Link } from 'react-router';
-import { Navbar, Nav, NavItem} from 'react-bootstrap';
-
 
 
 export default class Footer extends Component {
@@ -24,10 +22,10 @@ export default class Footer extends Component {
 	    });
    	}
 	render() {
-		// style={{backgroundColor: 'black', borderColor:'transparent', width: this.state.windowWidth }}
+
 
 	    return (
-			<div style={{display: 'flex', height: 50, color: 'black', alignItems: 'center', justifyContent: 'center'}}>
+			<div className="footer">
 				 © Jackson Chief Elk
 			</div>
 	    );

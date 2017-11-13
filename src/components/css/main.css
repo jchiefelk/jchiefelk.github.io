@@ -59,6 +59,17 @@
 	position: absolute;
 }
 
+.footer {
+	display: flex; 
+	background-color: black;
+	height: 50; 
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 0em;
+	width: 100%;
+}
+
 #background-video{
 	margin-top: -2em;
 	height: 100%;

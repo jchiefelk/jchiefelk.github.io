@@ -7,8 +7,8 @@ import Contact from '../components/pages/contact';
 
 const Routes = (props) => (
   <Router {...props}>
-    <Route path="/" component={App} />
-    <Route path="/about" component={About}/>
+    <Route path="/projects" component={App} />
+    <Route path="/" component={About}/>
     <Route path="/work" component={Work}/>
     <Route path="/contact" component={Contact} />
   </Router>
