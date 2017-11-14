@@ -1,16 +1,21 @@
 import React from 'react';
-import { Router, Route } from 'react-router';
+import { Route,  Switch } from 'react-router-dom';
+
 import App from '../components/App';
 import About from '../components/pages/about';
 import Work from '../components/pages/work';
 import Contact from '../components/pages/contact';
+import {hashHistory} from 'react-router';
 
-const Routes = (props) => (
-  <Router {...props}>
-    <Route path="/projects" component={App} />
-    <Route path="/" component={About}/>
-    <Route path="/work" component={Work}/>
-    <Route path="/contact" component={Contact} />
-  </Router>
+const Routes = () => (
+
+	  		<div>
+	  			<Switch>
+				    <Route exact path="/projects" component={App} />
+				    <Route exact path="/" component={About}/>
+				    <Route exact path="/work" component={Work}/>
+				    <Route exact path="/contact" component={Contact} />
+		 		</Switch>
+		    </div>
 );
 export default Routes;

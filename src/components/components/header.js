@@ -21,10 +21,7 @@ export default class Header extends Component {
 	    });
    	}
 	render() {
-
-
-	    return (
-
+		/**
 			 <Navbar inverse collapseOnSelect style={{backgroundColor: 'black', borderColor:'transparent', width: this.state.windowWidth , fontSize: 14, fontFamily: 'Avante Garde',fontWeight: '500',color: 'white', cursor: 'pointer', textDecoration: 'none' }}>
 			    <Navbar.Header>
 				     <Navbar.Brand>
@@ -41,7 +38,9 @@ export default class Header extends Component {
 			    </Navbar.Collapse>
 			  
 			  </Navbar>
-	    );
+		**/
+
+	    return(<div/>);
 	}
 
 }

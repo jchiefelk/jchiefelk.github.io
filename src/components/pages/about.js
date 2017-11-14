@@ -3,6 +3,7 @@ import Header from '../components/header';
 import { Router, Route, Link } from 'react-router'
 require('../css/about.css');
 
+
 export default class About extends Component {
 
 
@@ -23,9 +24,22 @@ export default class About extends Component {
 					</div>
 
 					<div className="col-6">
-					  <h2>Full Stack Engineer</h2>
-					  <img src={'./portrait.png'} className="portrait"/>
+					  <h2>ITEC 430 Scripting: Course Material</h2>
+					  <h3>Useful Links</h3>
+					  <a href="https://motherboard.vice.com/en_us/article/gv5wjy/hack-this-a-command-line-quick-start">Hack This: Become a Command Line Assassin</a>
+					  <a href="https://null-byte.wonderhowto.com/how-to/hack-like-pro-scan-globe-for-vulnerable-ports-services-0148132/">How to Scan the Globe for Vulnerable Ports & Services</a>
+					  <a href="https://www.hackingloops.com/bash-scripting-tutorial-for-penetration-testers/">BASH Scripting Tutorial for Penetration Testers</a>
+					  <a href="https://www.hackingloops.com/bash/">Bash Shell Commands You Really Need to Know</a>
+					  <a href="https://null-byte.wonderhowto.com/how-to/hack-like-pro-scripting-for-aspiring-hacker-part-1-bash-basics-0149422">Scripting for the Aspiring Hacker</a>
+
+
+
+		  			<h3>Essential Shell Commands</h3>
+			  			<a href="https://www.tutorialspoint.com/unix_commands/grep.htm">grep</a>
+			  			<a href="https://www.tutorialspoint.com/unix_commands/awk.htm">awk</a>
+			  			<a href="http://www.geeksforgeeks.org/sed-command-in-unix/">sed</a>
 					</div>
+
 
 					<div className="col-3 right">
 						  <div className="aside" style={{backgroundColor: 'black'}}>

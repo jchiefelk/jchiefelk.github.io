@@ -8,9 +8,12 @@ import { Router, Route, Link } from 'react-router'
 class App extends Component {
 
     render() {
+
+    	// redo header with mobile responsive css
+    	// 		<Header/>
         return(
         	<div style={{display: 'flex',flexDirection: 'column'}}> 
-        		<Header/>
+        
                 <Dashboard/>
                 <Footer/>
             </div>

@@ -51,7 +51,18 @@ html {
 }
 .col-4 {width: 33.33%;}
 .col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
+.col-6 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.col-6 a {
+  font-size: 12;
+  margin: 0.2em;
+  text-decoration: none;
+}
+
 .col-7 {width: 58.33%;}
 .col-8 {width: 66.66%;}
 .col-9 {width: 75%;}
