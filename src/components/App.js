@@ -3,6 +3,7 @@ import Dashboard from './dashboard';
 import Header from './components/header';
 import Footer from './components/footer';
 import About from './pages/about';
+import CourseMaterial from './pages/coursematerial';
 import { Router, Route, Link } from 'react-router'
 
 class App extends Component {
@@ -13,8 +14,8 @@ class App extends Component {
     	// 		<Header/>
         return(
         	<div style={{display: 'flex',flexDirection: 'column'}}> 
-        
-                <Dashboard/>
+                <Header/>
+                <CourseMaterial/>
                 <Footer/>
             </div>
         );

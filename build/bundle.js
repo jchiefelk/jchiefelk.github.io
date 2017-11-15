@@ -3933,7 +3933,7 @@ module.exports = SyntheticUIEvent;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -3953,62 +3953,106 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var Header = function (_Component) {
-	_inherits(Header, _Component);
+    _inherits(Header, _Component);
 
-	function Header() {
-		_classCallCheck(this, Header);
+    function Header() {
+        _classCallCheck(this, Header);
 
-		var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
+        var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
 
-		_this.state = {
-			width: window.innerWidth
-		};
-		return _this;
-	}
+        _this.state = {
+            clicked: false,
+            navClass: 'nav'
+        };
+        return _this;
+    }
 
-	_createClass(Header, [{
-		key: 'componentDidMount',
-		value: function componentDidMount() {
-			window.addEventListener('resize', this.handleResize.bind(this));
-		}
-	}, {
-		key: 'componentWillUnmount',
-		value: function componentWillUnmount() {
-			window.removeEventListener('resize', this.handleResize.bind(this));
-		}
-	}, {
-		key: 'handleResize',
-		value: function handleResize(e) {
-			this.setState({
-				windowWidth: window.innerWidth
-			});
-		}
-	}, {
-		key: 'render',
-		value: function render() {
-			/**
-   	 <Navbar inverse collapseOnSelect style={{backgroundColor: 'black', borderColor:'transparent', width: this.state.windowWidth , fontSize: 14, fontFamily: 'Avante Garde',fontWeight: '500',color: 'white', cursor: 'pointer', textDecoration: 'none' }}>
-   	    <Navbar.Header>
-   		     <Navbar.Brand>
-   		    	<Link to="/" style={{textDecoration: 'none', color: 'white'}}>Jackson Chief Elk</Link>
-   		     </Navbar.Brand>
-   	      <Navbar.Toggle />
-   	    </Navbar.Header>
-   		    <Navbar.Collapse>
-   	    	<Nav pullRight>
-   		    	<NavItem><Link to="about" style={{textDecoration: 'none', color: 'white'}}>about</Link></NavItem>
-           		<NavItem><Link to="contact" style={{textDecoration: 'none', color: 'white'}}>connect</Link></NavItem>
-          		</Nav>
-   	    </Navbar.Collapse>
-   	  
-   	  </Navbar>
-   **/
+    _createClass(Header, [{
+        key: 'handleResize',
+        value: function handleResize(e) {
+            this.setState({ windowWidth: window.innerWidth });
+            if (this.state.windowWidth > 500) {
+                this.setState({
+                    navClass: 'nav',
+                    clicked: false
+                });
+            }
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            window.addEventListener('resize', this.handleResize.bind(this));
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            window.removeEventListener('resize', this.handleResize);
+        }
+    }, {
+        key: 'clickNav',
+        value: function clickNav() {
+            if (this.state.clicked === false) {
+                this.setState({
+                    navClass: 'nav open',
+                    clicked: true
+                });
+            } else {
+                this.setState({
+                    navClass: 'nav',
+                    clicked: false
+                });
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            /**
+            	 <Navbar inverse collapseOnSelect style={{backgroundColor: 'black', borderColor:'transparent', width: this.state.windowWidth , fontSize: 14, fontFamily: 'Avante Garde',fontWeight: '500',color: 'white', cursor: 'pointer', textDecoration: 'none' }}>
+            	    <Navbar.Header>
+            		     <Navbar.Brand>
+            		    	<Link to="/" style={{textDecoration: 'none', color: 'white'}}>Jackson Chief Elk</Link>
+            		     </Navbar.Brand>
+            	      <Navbar.Toggle />
+            	    </Navbar.Header>
+            		    <Navbar.Collapse>
+            	    	<Nav pullRight>
+            		    	<NavItem><Link to="about" style={{textDecoration: 'none', color: 'white'}}>about</Link></NavItem>
+                    		<NavItem><Link to="contact" style={{textDecoration: 'none', color: 'white'}}>connect</Link></NavItem>
+                   		</Nav>
+            	    </Navbar.Collapse>
+            	  
+            	  </Navbar>
+            **/
+            return _react2.default.createElement(
+                'header',
+                { id: 'header' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'container' },
+                    _react2.default.createElement(
+                        'nav',
+                        { className: this.state.navClass, onClick: this.clickNav.bind(this) },
+                        _react2.default.createElement(
+                            'ul',
+                            null,
+                            _react2.default.createElement(
+                                'li',
+                                null,
+                                _react2.default.createElement(
+                                    _reactRouter.Link,
+                                    { to: { pathname: '/' } },
+                                    'New'
+                                )
+                            ),
+                            _react2.default.createElement('li', null)
+                        )
+                    )
+                )
+            );
+        }
+    }]);
 
-			return _react2.default.createElement('div', null);
-		}
-	}]);
-
-	return Header;
+    return Header;
 }(_react.Component);
 
 exports.default = Header;
@@ -8443,11 +8487,6 @@ var About = function (_Component) {
 						),
 						_react2.default.createElement(
 							'a',
-							{ href: 'https://null-byte.wonderhowto.com/how-to/hack-like-pro-scripting-for-aspiring-hacker-part-1-bash-basics-0149422' },
-							'Scripting for the Aspiring Hacker, Part 1 (BASH Basics)'
-						),
-						_react2.default.createElement(
-							'a',
 							{ href: 'https://null-byte.wonderhowto.com/how-to/hack-like-pro-scan-globe-for-vulnerable-ports-services-0148132/' },
 							'How to Scan the Globe for Vulnerable Ports & Services'
 						),
@@ -8462,9 +8501,29 @@ var About = function (_Component) {
 							'Bash Shell Commands You Really Need to Know'
 						),
 						_react2.default.createElement(
+							'a',
+							{ href: 'https://null-byte.wonderhowto.com/how-to/hack-like-pro-scripting-for-aspiring-hacker-part-1-bash-basics-0149422' },
+							'Scripting for the Aspiring Hacker'
+						),
+						_react2.default.createElement(
 							'h3',
 							null,
-							'Most Powerful Shell Commands'
+							'Essential Shell Commands'
+						),
+						_react2.default.createElement(
+							'a',
+							{ href: 'https://www.tutorialspoint.com/unix_commands/grep.htm' },
+							'grep'
+						),
+						_react2.default.createElement(
+							'a',
+							{ href: 'https://www.tutorialspoint.com/unix_commands/awk.htm' },
+							'awk'
+						),
+						_react2.default.createElement(
+							'a',
+							{ href: 'http://www.geeksforgeeks.org/sed-command-in-unix/' },
+							'sed'
 						)
 					),
 					_react2.default.createElement(
@@ -15190,7 +15249,7 @@ exports = module.exports = __webpack_require__(44)(undefined);
 
 
 // module
-exports.push([module.i, ".portrait {\n\twidth: 100%;\n}\n\n.row::after {\n    content: \"\";\n    clear: both;\n    display: block;\n    flex-direction: column;\n}\n[class*=\"col-\"] {\n    float: left;\n    padding: 15px;\n}\nhtml {\n    font-family: \"Lucida Sans\", sans-serif;\n}\n\n.menu ul {\n    list-style-type: none;\n    margin: 0;\n    padding: 0;\n}\n.menu li {\n\tcursor: pointer;\n    padding: 8px;\n    margin-bottom: 7px;\n    background-color: black;\n    color: #ffffff;\n    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n}\n\n.menu li:hover {\n    background-color: red;\n}\n\n.aside {\n    background-color: black;\n    padding: 15px;\n    color: #ffffff;\n    text-align: center;\n    font-size: 14px;\n    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n}\n\n/* For desktop: */\n.col-1 {width: 8.33%;}\n.col-2 {width: 16.66%;}\n.col-3 {\n\twidth: 25%;\n\n}\n.col-4 {width: 33.33%;}\n.col-5 {width: 41.66%;}\n.col-6 {width: 50%;}\n.col-7 {width: 58.33%;}\n.col-8 {width: 66.66%;}\n.col-9 {width: 75%;}\n.col-10 {width: 83.33%;}\n.col-11 {width: 91.66%;}\n.col-12 {width: 100%;}\n\n/*Skills responsive row*/\n.HolyGrail {\n  display: flex;\n  min-height: 100vh;\n  flex-direction: column;\n}\n\n.HolyGrail-body {\n  display: flex;\n  flex: 1;\n}\n\n.HolyGrail-content {\n  flex: 1;\n}\n\n.HolyGrail-nav, .HolyGrail-ads {\n  /* 12em is the width of the columns */\n  flex: 0 0 25em;\n}\n\n.HolyGrail-nav {\n  /* put the nav on the left */\n  order: -1;\n}\n\n.HolyGrail,\n.HolyGrail-body {\n  display: flex;\n  flex-direction: column;\n}\n\n.HolyGrail-nav {\n  order: -1;\n}\n\n@media (min-width: 1000px) {\n  .HolyGrail-body {\n    flex-direction: row;\n    flex: 1;\n  }\n  .HolyGrail-content {\n    flex: 1;\n  }\n  .HolyGrail-nav, .HolyGrail-ads {\n    /* 12em is the width of the columns */\n    flex: 0 0 12em;\n  }\n}\n\n@media only screen and (max-width: 768px) {\n    /* For mobile phones: */\n    [class*=\"col-\"] {\n        width: 100%;\n    }\n}", ""]);
+exports.push([module.i, ".portrait {\n\twidth: 100%;\n}\n\n.row::after {\n    content: \"\";\n    clear: both;\n    display: block;\n}\n[class*=\"col-\"] {\n    float: left;\n    padding: 15px;\n}\nhtml {\n    font-family: \"Lucida Sans\", sans-serif;\n}\n\n.menu ul {\n    list-style-type: none;\n    margin: 0;\n    padding: 0;\n}\n.menu li {\n\tcursor: pointer;\n    padding: 8px;\n    margin-bottom: 7px;\n    background-color: black;\n    color: #ffffff;\n    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n}\n\n.menu li:hover {\n    background-color: red;\n}\n\n.aside {\n    background-color: black;\n    padding: 15px;\n    color: #ffffff;\n    text-align: center;\n    font-size: 14px;\n    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);\n}\n\n/* For desktop: */\n.col-1 {width: 8.33%;}\n.col-2 {width: 16.66%;}\n.col-3 {\n\twidth: 25%;\n\n}\n.col-4 {width: 33.33%;}\n.col-5 {width: 41.66%;}\n.col-6 {\n  width: 50%;\n  display: flex;\n  flex-direction: column;\n}\n\n.col-6 a {\n  font-size: 12;\n  margin: 0.2em;\n  text-decoration: none;\n}\n\n.col-7 {width: 58.33%;}\n.col-8 {width: 66.66%;}\n.col-9 {width: 75%;}\n.col-10 {width: 83.33%;}\n.col-11 {width: 91.66%;}\n.col-12 {width: 100%;}\n\n/*Skills responsive row*/\n.HolyGrail {\n  display: flex;\n  min-height: 100vh;\n  flex-direction: column;\n}\n\n.HolyGrail-body {\n  display: flex;\n  flex: 1;\n}\n\n.HolyGrail-content {\n  flex: 1;\n}\n\n.HolyGrail-nav, .HolyGrail-ads {\n  /* 12em is the width of the columns */\n  flex: 0 0 25em;\n}\n\n.HolyGrail-nav {\n  /* put the nav on the left */\n  order: -1;\n}\n\n.HolyGrail,\n.HolyGrail-body {\n  display: flex;\n  flex-direction: column;\n}\n\n.HolyGrail-nav {\n  order: -1;\n}\n\n@media (min-width: 1000px) {\n  .HolyGrail-body {\n    flex-direction: row;\n    flex: 1;\n  }\n  .HolyGrail-content {\n    flex: 1;\n  }\n  .HolyGrail-nav, .HolyGrail-ads {\n    /* 12em is the width of the columns */\n    flex: 0 0 12em;\n  }\n}\n\n@media only screen and (max-width: 768px) {\n    /* For mobile phones: */\n    [class*=\"col-\"] {\n        width: 100%;\n    }\n}", ""]);
 
 // exports
 
@@ -15204,7 +15263,7 @@ exports = module.exports = __webpack_require__(44)(undefined);
 
 
 // module
-exports.push([module.i, ".summary {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tflex-direction: column;\n}\n\n.Title {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tposition: absolute;\n\ttop: 3em;\n\tfont-size: 4.5vw;\n\tcolor: black;\n\tfont-family: 'Lora', serif;\n\ttext-decoration: 'none';\n\tmargin-top: 0.1em;\n\talign-text: center;\n\ttext-rendering: optimizeLegibility;\n}\n\n.about-me-parent {\n\tdisplay: flex;\n\tflex-direction: column;\n\tposition: absolute;\n\ttop: 10em;\n\tbackground-color: Snow;\n\twidth: 80%;\n\theight: 60%;\n\tfont-size: 2.2vw;\n\tfont-family: 'Lora', serif;\n\ttext-rendering: optimizeLegibility;\n\ttext-decoration: 'none';\n\tmargin-top: 0;\n\topacity: 0.6;\n}\n\n.about-me-child {\n\tmargin-left: 2em;\n\tfont-size: 1.7vw;\n\tcolor: blue;\n\tmargin-top: 1em;\n\tcursor: pointer;\n\ttext-decoration: none;\n}\n\n.dashboard {\n\tdisplay: flex;\n\tjustify-content: center; \n\tflex-direction: column;\t\n}\n\n.box {\n\tbackground-color: black;\n\tcolor: black;\n\twidth: 3000;\n\theight: 3000;\n\tposition: absolute;\n}\n\n.footer {\n\tdisplay: flex; \n\tbackground-color: black;\n\theight: 50; \n\talign-items: center;\n\tjustify-content: center;\n\tposition: absolute;\n\tbottom: 0em;\n\twidth: 100%;\n}\n\n#background-video{\n\tmargin-top: -2em;\n\theight: 100%;\n\twidth: 100%;\n\tpadding: none;\n\tdisplay: flex;\n\tbackground: transparent;\n}", ""]);
+exports.push([module.i, ".summary {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tflex-direction: column;\n}\n\n.Title {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\tposition: absolute;\n\ttop: 3em;\n\tfont-size: 4.5vw;\n\tcolor: black;\n\tfont-family: 'Lora', serif;\n\ttext-decoration: 'none';\n\tmargin-top: 0.1em;\n\talign-text: center;\n\ttext-rendering: optimizeLegibility;\n}\n\n.about-me-parent {\n\tdisplay: flex;\n\tflex-direction: column;\n\tposition: absolute;\n\ttop: 10em;\n\tbackground-color: Snow;\n\twidth: 80%;\n\theight: 60%;\n\tfont-size: 2.2vw;\n\tfont-family: 'Lora', serif;\n\ttext-rendering: optimizeLegibility;\n\ttext-decoration: 'none';\n\tmargin-top: 0;\n\topacity: 0.6;\n}\n\n.about-me-child {\n\tmargin-left: 2em;\n\tfont-size: 1.7vw;\n\tcolor: blue;\n\tmargin-top: 1em;\n\tcursor: pointer;\n\ttext-decoration: none;\n}\n\n.dashboard {\n\tdisplay: flex;\n\tjustify-content: center; \n\tflex-direction: column;\t\n}\n\n.box {\n\tbackground-color: black;\n\tcolor: black;\n\twidth: 3000;\n\theight: 3000;\n\tposition: absolute;\n}\n\n.footer {\n\tdisplay: flex; \n\tbackground-color: black;\n\theight: 50; \n\talign-items: center;\n\tjustify-content: center;\n\tposition: absolute;\n\tbottom: 0em;\n\twidth: 100%;\n}\n\n#background-video{\n\tmargin-top: -2em;\n\theight: 100%;\n\twidth: 100%;\n\tpadding: none;\n\tdisplay: flex;\n\tbackground: transparent;\n}\n\n#header {\n  z-index: 2;\n  position: fixed;\n  width: 100%;\n  height: 60px;\n  line-height: 60px;\n  background-color: rgb(108, 153, 169);\n  color: white;\n}\n#header h1 {\n  margin: 0px;\n  font-size: 1.2em;\n}\n\n.nav {\n  position: absolute;\n  right: 0;\n  bottom: 15px;\n  height: 60px;\n}\n\n.nav ul li {\n  float: left;\n  list-style: none; \n}\n\n.nav ul li a {\n  display: block;\n  color: white;\n  text-decoration: none;\n  padding: 0 10px;\n}\n\n@media (max-width: 600px) {\n  #header .container {\n    width: 100%;\n  }\n  #header h1 {\n    padding-left: 3%;\n  }\n  .nav {\n    width: 100%;\n    top: 0px;\n  }\n  .nav:before {\n    content: '\\2630';\n    display: block;\n    position: absolute;\n    top: 10px;\n    right: 5%;\n    line-height: 40px;\n    font-size: 1.4em;\n    cursor: pointer;\n  }\n  .nav ul {\n    background: rgb(108, 153, 169);\n    width: 100%;\n    margin: 0px;\n  \ttransform: translateY(-500px);\n    -moz-transform: translateY(-500px);\n  }\n  .nav ul li {\n    float: none;\n  }\n  .nav ul li a {\n  }\n .nav.open ul {\n    margin-top: 10%;\n \t  opacity: 1;\n    transform: translateY(0px);\n    -moz-transform: translateY(0px);\n    -webkit-transform:  perspective(600) rotate3d(0,0,0,0);\n  }\n}\n\n", ""]);
 
 // exports
 

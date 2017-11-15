@@ -6,6 +6,7 @@
     content: "";
     clear: both;
     display: block;
+  
 }
 [class*="col-"] {
     float: left;
@@ -21,7 +22,7 @@ html {
     padding: 0;
 }
 .menu li {
-	cursor: pointer;
+	  cursor: pointer;
     padding: 8px;
     margin-bottom: 7px;
     background-color: black;
@@ -47,7 +48,6 @@ html {
 .col-2 {width: 16.66%;}
 .col-3 {
 	width: 25%;
-
 }
 .col-4 {width: 33.33%;}
 .col-5 {width: 41.66%;}
