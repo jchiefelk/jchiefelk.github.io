@@ -61,6 +61,7 @@ export default class CourseMaterial extends Component {
 			  			<a href="https://www.tutorialspoint.com/unix_commands/awk.htm">awk</a>
 			  			<a href="http://www.geeksforgeeks.org/sed-command-in-unix/">sed</a>
 			  			<h4>Essential Shell Tools in 2017</h4>
+			  			<a href="https://git-scm.com/">git</a>
 			  			<a href="https://www.npmjs.com/">npm</a>
 			  			<a href="https://pypi.python.org/pypi/pip">pip</a>
 			  			<a href="https://gcc.gnu.org/">gcc</a>

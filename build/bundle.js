@@ -8800,6 +8800,11 @@ var CourseMaterial = function (_Component) {
 							),
 							_react2.default.createElement(
 								'a',
+								{ href: 'https://git-scm.com/' },
+								'git'
+							),
+							_react2.default.createElement(
+								'a',
 								{ href: 'https://www.npmjs.com/' },
 								'npm'
 							),
