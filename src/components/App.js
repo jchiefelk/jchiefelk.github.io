@@ -13,7 +13,7 @@ class App extends Component {
     	// redo header with mobile responsive css
     	// 		<Header/>
         return(
-        	<div style={{display: 'flex',flexDirection: 'column'}}> 
+        	<div> 
                 <Header/>
                 <CourseMaterial/>
                 <Footer/>

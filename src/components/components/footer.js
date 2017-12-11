@@ -22,10 +22,9 @@ export default class Footer extends Component {
 	    });
    	}
 	render() {
-
-
+		// className="footer"
 	    return (
-			<div className="footer">
+			<div id="footer">
 				 © Jackson Chief Elk
 			</div>
 	    );

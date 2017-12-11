@@ -2,25 +2,22 @@
 	width: 100%;
 }
 
-.row::after {
-    content: "";
-    clear: both;
-    display: block;
-  
+.about {
+
 }
-[class*="col-"] {
-    float: left;
-    padding: 15px;
+
+.row {
+   
 }
+
 html {
     font-family: "Lucida Sans", sans-serif;
 }
 
 .menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+
 }
+
 .menu li {
 	  cursor: pointer;
     padding: 8px;
@@ -30,8 +27,14 @@ html {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
 .menu li:hover {
-    background-color: red;
+  background-color: red;
 }
 
 .aside {
@@ -42,33 +45,38 @@ html {
     font-size: 14px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
-
 /* For desktop: */
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {
+.leftcol {
+
+  float: left;
+  padding: 15px;
+  margin-top:1em;
 	width: 25%;
+  /*margin-left: -0.01em;*/
 }
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {
+
+.rightcol {
+
+  float: left;
+  padding: 15px;
+  margin-top: 1em;
+  width: 25%;
+  /*margin-right: -0.9em;*/
+}
+
+.middlecol {
+  float: left;
+  padding: 15px;
   width: 50%;
   display: flex;
   flex-direction: column;
 }
 
-.col-6 a {
+.middlecol a {
   font-size: 12;
   margin: 0.2em;
   text-decoration: none;
 }
-
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
 
 /*Skills responsive row*/
 .HolyGrail {
@@ -80,10 +88,13 @@ html {
 .HolyGrail-body {
   display: flex;
   flex: 1;
+  position: relative;
+  right: 0em;
 }
 
 .HolyGrail-content {
   flex: 1;
+
 }
 
 .HolyGrail-nav, .HolyGrail-ads {
@@ -100,6 +111,7 @@ html {
 .HolyGrail-body {
   display: flex;
   flex-direction: column;
+
 }
 
 .HolyGrail-nav {
@@ -122,7 +134,11 @@ html {
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
-    [class*="col-"] {
+    [class*="rightcol"] {
+        width: 100%;
+    }
+
+    [class*="leftcol"] {
         width: 100%;
     }
 }

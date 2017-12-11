@@ -6,13 +6,16 @@ import Work from '../components/pages/work';
 import Contact from '../components/pages/contact';
 import CourseMaterial from '../components/pages/coursematerial';
 import {hashHistory} from 'react-router';
+require('../components/css/about.css');
+
+
+
 
 const Routes = () => (
 
 	  		<div>
 	  			<Switch>
-				    <Route exact path="/" component={App} />
-				    <Route exact path="/coursematerial" component={CourseMaterial} />
+				    <Route exact path="/" component={CourseMaterial} />
 				    <Route exact path="/about" component={About}/>
 				    <Route exact path="/work" component={Work}/>
 				    <Route exact path="/contact" component={Contact} />

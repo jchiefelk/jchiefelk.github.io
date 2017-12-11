@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import Header from '../components/header';
+import Footer from '../components/footer'
 import { Router, Route, Link } from 'react-router'
-require('../css/about.css');
-
 
 export default class About extends Component {
 
@@ -96,6 +95,9 @@ export default class About extends Component {
 					</div>
 				</div>
 				</div>
+
+
+				<Footer/>
 	        </div>
 		);
 	}
