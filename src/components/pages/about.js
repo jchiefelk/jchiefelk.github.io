@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
 import Header from '../components/header';
 import Footer from '../components/footer'
-import { Router, Route, Link } from 'react-router'
+
 
 export default class About extends Component {
-
-
-	/**
+	/*****
 						<h3>My skills include</h3>
   							<div className="HolyGrail">
 								  <div className="HolyGrail-body">
@@ -27,43 +25,7 @@ export default class About extends Component {
 								  </div>
 							</div>
 
-	**/
-
-
-	render(){
-		return(
-			<div className="main"> 
-				<Header/>
-
-				<div className="about">
-				<div className="row">
-					<div className="col-3 menu" >
-					  <ul>
-					    <li style={{backgroundColor: 'black'}}><a style={{textDecoration: 'none',color: 'white'}}  href="https://github.com/jchiefelk">Github</a></li>
-					    <li style={{backgroundColor: 'black'}}><a style={{textDecoration: 'none',color: 'white'}}  href="https://node-quandl.herokuapp.com/">Bitcoin & Stock Analysis</a></li>
-					  </ul>
-					</div>
-
-					<div className="col-6">
-					  <h2>Full Stack Engineer</h2>
-					</div>
-
-					<div className="col-3 right">
-						  <div className="aside" style={{backgroundColor: 'black'}}>
-							    <h3>Quick Intro</h3>
-							    <p>
-							    	I’m a Software Developer located in Polson, MT.  I'm super passionate about coding and education.  I currently work 
-							    	as an IT and CS Instructor at Salish Kootenai College.
-							    </p>
-
-							     <h3>Professional and Teaching Experience</h3>
-							    <p>
-							    	I've worked for 2 startups as a Mobile, 
-							    	Web, and Embedded Engineer.  I'm currently into Full-Stack JavaSript; Node.js, React.js, 
-							    	and React-Native. Before I worked for Activily and KinaTouch, I worked as a Teaching Assistant
-							    	at UC Santa Cruz, and the University of Montana for Pre-Calculus, Quantum Mechanics, and Biochemistry
-							    </p>
-						  
+							  
 						 	<div className="HolyGrail">
 								  <div className="HolyGrail-body">
 								    <div className="HolyGrail-content">
@@ -90,13 +52,42 @@ export default class About extends Component {
 								    </div>
 								  </div>
 							</div>
-
 						  </div>
+	****/
+
+	render(){
+		return(
+			<div className="main"> 
+				<Header/>
+				<div className="about">
+					<div className="row">
+
+						<div className="leftcol">
+						 <h3>Work</h3>
+
+						  <ul>
+						    <li><a href="https://github.com/jchiefelk">Github</a></li>
+						    <li><a href="https://node-quandl.herokuapp.com/">Bitcoin & Stock Analysis</a></li>
+						  </ul>
+						</div>
+
+
+						<div className="middlecol">
+						  	<h3>Full Stack Engineer</h3>
+								<p>
+								    I’m a Software Developer located in Polson, MT.  I'm super passionate about coding and education.  I currently work 
+								    as an IT and CS Instructor at Salish Kootenai College.
+								</p>
+								 <p>
+								    	I've worked for 2 startups as a Mobile, 
+								    	Web, and Embedded Engineer.  I'm currently into Full Stack JavaSript; Node.js, React.js, 
+								    	and React-Native. Before I worked for Activily and KinaTouch, I worked as a Teaching Assistant
+								    	at UC Santa Cruz, and the University of Montana for Pre-Calculus, Quantum Mechanics, and Biochemistry
+								</p>
+						</div>
 					</div>
-				</div>
-				</div>
 
-
+				</div>
 				<Footer/>
 	        </div>
 		);

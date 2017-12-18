@@ -14,60 +14,72 @@ html {
     font-family: "Lucida Sans", sans-serif;
 }
 
-.menu ul {
-
+/* For desktop: */
+.leftcol {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  margin-top:1em;
+	width: 30%;
 }
 
-.menu li {
-	  cursor: pointer;
-    padding: 8px;
+.leftcol ul {
+  list-style-type: none;
+  background-color: white;
+  padding-left: 0em;
+}
+
+.leftcol li  {
+    cursor: pointer;
     margin-bottom: 7px;
     background-color: black;
     color: #ffffff;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.menu li a {
+.leftcol a {
   color: white;
   text-decoration: none;
+  font-weight: 500;
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+.leftcol h3 {
+  font-weight: 500;
   font-size: 1.2em;
-}
-
-.menu li:hover {
-  background-color: red;
-}
-
-.aside {
-    background-color: black;
-    padding: 15px;
-    color: #ffffff;
-    text-align: center;
-    font-size: 14px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-/* For desktop: */
-.leftcol {
-
-  float: left;
-  padding: 15px;
-  margin-top:1em;
-	width: 25%;
-  /*margin-left: -0.01em;*/
+  color: black;
 }
 
 .rightcol {
-
+  display: flex;
+  flex-direction: column;
+  background-color: black;
   float: left;
   padding: 15px;
-  margin-top: 1em;
-  width: 25%;
-  /*margin-right: -0.9em;*/
+  margin-top:1em;
+  width: 30%;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.rightcol a {
+  color: white;
+  text-decoration: none;
+  margin-top: 1.0em;
+}
+
+.rightcol h3 {
+  font-weight: 500;
+  font-size: 1.2em;
+  color: white;
 }
 
 .middlecol {
   float: left;
   padding: 15px;
-  width: 50%;
+  width: 70%;
   display: flex;
   flex-direction: column;
 }
@@ -78,63 +90,34 @@ html {
   text-decoration: none;
 }
 
-/*Skills responsive row*/
-.HolyGrail {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
+.middlecol h1 {
+  font-weight: 400;
+  color: black;
 }
 
-.HolyGrail-body {
-  display: flex;
-  flex: 1;
-  position: relative;
-  right: 0em;
+.middlecol h3 {
+  font-weight: 700;
+  color: black;
 }
 
-.HolyGrail-content {
-  flex: 1;
-
+.middlecol h3 {
+  margin-top: 1.5em;
+  font-weight: 400;
 }
 
-.HolyGrail-nav, .HolyGrail-ads {
-  /* 12em is the width of the columns */
-  flex: 0 0 25em;
-}
 
-.HolyGrail-nav {
-  /* put the nav on the left */
-  order: -1;
-}
-
-.HolyGrail,
-.HolyGrail-body {
-  display: flex;
-  flex-direction: column;
-
-}
-
-.HolyGrail-nav {
-  order: -1;
-}
-
-@media (min-width: 1000px) {
-  .HolyGrail-body {
-    flex-direction: row;
-    flex: 1;
-  }
-  .HolyGrail-content {
-    flex: 1;
-  }
-  .HolyGrail-nav, .HolyGrail-ads {
-    /* 12em is the width of the columns */
-    flex: 0 0 12em;
-  }
+.middlecol h4 {
+  font-weight: 100;
+  color: black;
 }
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     [class*="rightcol"] {
+        width: 100%;
+    }
+
+    [class*="middlecol"]{
         width: 100%;
     }
 

@@ -10,8 +10,8 @@ export default class Contact extends Component {
 			<div style={{display: 'flex',flexDirection: 'column'}}> 
 	        	<Header/>
 
-	        	<div style={{display: 'flex', flex: 1, alignItems: 'center',justifyContent: 'center', flexDirection: 'column'}}>
-		        	<p>email - jchiefelk@gmail.com</p>
+	        	<div style={{marginTop: 100,display: 'flex', flex: 1, alignItems: 'center',justifyContent: 'center', flexDirection: 'column'}}>
+		        	<p>email - jackson_chiefelk@skc.edu</p>
 		        	<p>phone - (831)-588-6504</p>
 	       		</div>
 
