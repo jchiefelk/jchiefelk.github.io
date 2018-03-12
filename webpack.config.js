@@ -6,14 +6,14 @@ var path = require('path');
 
   output: {
         filename: "bundle.js",
-        path: __dirname + "/build",
+        path: __dirname + "/static",
   },
 
   module: {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
       { test: /\.css$/, loader: 'style-loader!css-loader' },
-
+      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=25000'},
       {
         test: /\.(png|gif|jpg)$/,
         include: [
@@ -21,6 +21,9 @@ var path = require('path');
         ],
         loader: 'file-loader',
       }
+
+
+
     ]
   },
 
@@ -29,6 +32,4 @@ var path = require('path');
   }
 
 };
-
-
 

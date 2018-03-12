@@ -10,7 +10,6 @@ export default class Header extends Component {
             navClass: 'nav'
         };
     }
-
     handleResize(e) {
         this.setState({ windowWidth: window.innerWidth});
         if(this.state.windowWidth > 500) {
@@ -20,7 +19,6 @@ export default class Header extends Component {
             });
         }
     }
-
     componentDidMount() {
         window.addEventListener('resize', this.handleResize.bind(this))
     }
@@ -44,24 +42,7 @@ export default class Header extends Component {
     }
 
 	render() {
-		/**
-			 <Navbar inverse collapseOnSelect style={{backgroundColor: 'black', borderColor:'transparent', width: this.state.windowWidth , fontSize: 14, fontFamily: 'Avante Garde',fontWeight: '500',color: 'white', cursor: 'pointer', textDecoration: 'none' }}>
-			    <Navbar.Header>
-				     <Navbar.Brand>
-				    	<Link to="/" style={{textDecoration: 'none', color: 'white'}}>Jackson Chief Elk</Link>
-				     </Navbar.Brand>
-			      <Navbar.Toggle />
-			    </Navbar.Header>
 
-			    <Navbar.Collapse>
-			    	<Nav pullRight>
-				    	<NavItem><Link to="about" style={{textDecoration: 'none', color: 'white'}}>about</Link></NavItem>
-		        		<NavItem><Link to="contact" style={{textDecoration: 'none', color: 'white'}}>connect</Link></NavItem>
-	        		</Nav>
-			    </Navbar.Collapse>
-			  
-			  </Navbar>
-		**/
 	    return(
             <header id="header">
                   <div className="container">
@@ -71,7 +52,7 @@ export default class Header extends Component {
                     <nav className={this.state.navClass}  onClick={this.clickNav.bind(this)}>
                         <ul>
                             <li>
-                              <Link to="about" style={{textDecoration: 'none', color: 'white'}}>about</Link>
+                              <Link to="classes" style={{textDecoration: 'none', color: 'white'}}>class</Link>
                             </li>
                             <li>
                               <Link to="contact" style={{textDecoration: 'none', color: 'white'}}>connect</Link>

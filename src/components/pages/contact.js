@@ -12,7 +12,7 @@ export default class Contact extends Component {
 
 	        	<div style={{marginTop: 100,display: 'flex', flex: 1, alignItems: 'center',justifyContent: 'center', flexDirection: 'column'}}>
 		        	<p>email - jackson_chiefelk@skc.edu</p>
-		        	<p>phone - (831)-588-6504</p>
+		        	<p>phone - (406)-275-4800 ext. 4898</p>
 	       		</div>
 
 	        </div>
