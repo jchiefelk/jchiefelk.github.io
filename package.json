@@ -12,8 +12,8 @@
     "react-test-renderer": "^15.6.1"
   },
   "dependencies": {
-    "babel": "^6.5.2",
-    "babel-loader": "^6.2.10",
+    "babel": "^6.23.0",
+    "babel-loader": "^6.4.1",
     "body-parser": "^1.17.1",
     "cors": "^2.8.1",
     "css-loader": "^0.28.7",

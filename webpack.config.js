@@ -22,8 +22,6 @@ var path = require('path');
         loader: 'file-loader',
       }
 
-
-
     ]
   },
 
