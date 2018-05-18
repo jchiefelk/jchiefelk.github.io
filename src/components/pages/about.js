@@ -5,22 +5,22 @@ import Footer from '../components/footer'
 
 export default class About extends Component {
 
+/**
+
+**/
 	render(){
 		return(
-			<div className="main"> 
+			<div> 
 				<Header/>
 				<div className="about">
 					<div className="row">
-
 						<div className="leftcol">
 						 <h3>Work</h3>
 						  <ul>
 						    <li><a href="https://github.com/jchiefelk">Github</a></li>
-						    <li><a href="https://cryptocorrelation.herokuapp.com/">Bitcoin Price Analysis and Performant Rendering</a></li>
+						    <li><a href="https://cryptocorrelation.herokuapp.com/">Bitcoin Price Visualization with D3.js</a></li>
 						  </ul>
 						</div>
-
-
 						<div className="middlecol">
 						  	<h3>Full Stack Engineer</h3>
 								<p>
@@ -34,8 +34,6 @@ export default class About extends Component {
 								    Quantum Mechanics, and Biochemistry.
 								</p>
 						</div>
-
-
 						</div>
 					</div>
 				<Footer/>

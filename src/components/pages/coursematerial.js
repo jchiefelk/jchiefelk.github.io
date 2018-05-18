@@ -14,14 +14,11 @@ export default class CourseMaterial extends Component {
 			<div className="main">
 				<Header/>
 				<div className="about">
-
 					<div className="row">
-
-
 						<div className="middlecol">
-						  <h3><a href="https://github.com/jchiefelk/ITEC-430">ITEC 430 Scripting for Systems Administrators & DevOps</a></h3>  
-						  <h3><a href="https://github.com/jchiefelk/ITEC-335">ITEC 335 Administrating Networking Services</a></h3>
-				  		  <h3><a href="https://github.com/jchiefelk/ITEC-240-241">ITEC 240/241 Windows Server Administration</a></h3>
+						  <h3><a href="https://github.com/jchiefelk/ITEC-430">Scripting for Systems Administrators & DevOps</a></h3>  
+						  <h3><a href="https://github.com/jchiefelk/ITEC-335">Administrating Networking Services in Linux</a></h3>
+				  		  <h3><a href="https://github.com/jchiefelk/ITEC-240-241">Windows Server Administration</a></h3>
 						</div>
 		  				</div>
 					</div>
