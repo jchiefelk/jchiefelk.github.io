@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- "20 line router" -->
+<!-- http://joakim.beng.se/blog/posts/a-javascript-router-in-20-lines.html -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Building a router</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="javascript"  src="router.js"></script>
+
+
+  <script type="text/html" id="home">
+    <h1>Software Engineer</h1>
+  </script>
+  <script type="text/html" id="work">
+    <h1>Page 1: <%= greeting %></h1>
+    <p><%= moreText %></p>
+  </script>
+  <script type="text/html" id="opensource">
+    <h1>Page 2: <%= heading %></h1>
+    <p>Something about me</p>
+  </script>
+</head>
+
+
+<header class="header">
+  <a href="#" class="logo">Jackson Chief Elk</a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a href="#/work">Work</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#/opensource">Github</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</header>
+
+
+<body>
+<div class="routes">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#/work">Work</a></li>
+    <li><a href="#/opensource">Open Source Project</a></li>
+  </ul>
+</div>
+  <div id="view"></div>
+  <script type="javascript"  src="router.js"></script>
+</body>
+</html>
