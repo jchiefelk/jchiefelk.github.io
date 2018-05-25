@@ -67,15 +67,18 @@
     <h1>Software Engineer</h1>
   </script>
   <script type="text/html" id="work">
-    <h1>Page 1: <%= greeting %></h1>
-    <p><%= moreText %></p>
+    <h1><%= heading %></h1>
   </script>
   <script type="text/html" id="opensource">
-    <h1>Page 2: <%= heading %></h1>
-    <p>Something about me</p>
+    <h1><%= heading %></h1>
+    <a href="https://github.com/jchiefelk">Github</a>
+  </script>
+
+  <script type="text/html" id="contact">
+    <h1><%= heading %></h1>
+    <a href="https://www.linkedin.com/in/jchiefelk/">LinkedIn</a>
   </script>
 </head>
-
 
 <header class="header">
   <a href="#" class="logo">Jackson Chief Elk</a>
@@ -96,19 +99,21 @@
     <li><a href="#">Home</a></li>
     <li><a href="#/work">Work</a></li>
     <li><a href="#/opensource">Open Source Project</a></li>
+    <li><a href="#/contact">Contact</a></li>
   </ul>
 </div>
   <div id="view"></div>
   <script>
     route('/', 'home', function () {});
     route('/work', 'work', function () {
-      this.greeting = 'About Page';
-      this.moreText = 'Something about me';
+      this.heading = 'About Page';
     });
     route('/opensource', 'opensource', function () {
-      this.heading = 'Open Source Page';
+      this.heading = 'Open Source Work';
+    });
+    route('/contact','contact',function(){
+      this.heading = 'Contact';
     });
   </script>
-
 </body>
 </html>
