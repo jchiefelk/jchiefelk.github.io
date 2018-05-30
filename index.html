@@ -4,7 +4,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Building a router</title>
+  <title>Jackson Chief Elk</title>
   <link rel="stylesheet" href="styles.css">
   <script>
         // Simple JavaScript Templating
@@ -64,10 +64,16 @@
   </script>
 
   <script type="text/html" id="home">
-    <h1>Software Engineer</h1>
+    <h1><%= heading %></h1>
   </script>
   <script type="text/html" id="work">
+
+<div>
     <h1><%= heading %></h1>
+    <a href="https://www.skc.edu/">Salish & Kootenai College</a>
+    <a href="http://activily.com/">Activily</a>
+    <a href="http://www.santacruzsentinel.com/article/NE/20150430/NEWS/150439971">KinaTouch</a>
+</div>
   </script>
   <script type="text/html" id="opensource">
     <h1><%= heading %></h1>
@@ -104,9 +110,11 @@
 </div>
   <div id="view"></div>
   <script>
-    route('/', 'home', function () {});
+    route('/', 'home', function () {
+      this.heading= 'Web and Mobile Engineer, and STEM Education';
+    });
     route('/work', 'work', function () {
-      this.heading = 'About Page';
+      this.heading = 'Professional Experience';
     });
     route('/opensource', 'opensource', function () {
       this.heading = 'Open Source Work';
