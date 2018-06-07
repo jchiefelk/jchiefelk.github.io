@@ -5,10 +5,13 @@
 <head>
   <meta charset="utf-8">
   <title>Jackson Chief Elk</title>
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/base.css" />
+  <link rel="stylesheet" type="text/css" href="css/demo4.css" />
+  <link rel="stylesheet" type="text/css" href="pater/pater.css" />
+<link rel="stylesheet" href="css/styles.css">
   <script>
-        // Simple JavaScript Templating
-    // John Resig - https://johnresig.com/ - MIT Licensed
+    // Simple JavaScript Templating
     (function(){
       var cache = {};
       this.tmpl = function tmpl(str, data){
@@ -61,67 +64,78 @@
     window.addEventListener('hashchange', router);
     // Listen on page load:
     window.addEventListener('load', router);
-  </script>
+</script>
 
-  <script type="text/html" id="home">
-    <h1><%= heading %></h1>
-  </script>
-  <script type="text/html" id="work">
 
-<div>
-    <h1><%= heading %></h1>
-    <a href="https://www.skc.edu/">Salish & Kootenai College</a>
-    <a href="http://activily.com/">Activily</a>
-    <a href="http://www.santacruzsentinel.com/article/NE/20150430/NEWS/150439971">KinaTouch</a>
-</div>
-  </script>
-  <script type="text/html" id="opensource">
-    <h1><%= heading %></h1>
-    <a href="https://github.com/jchiefelk">Github</a>
-  </script>
+<script type="text/html" id="home"> 
+      <div class="content__inner">
+          <h1><%= heading %></h1>
+          <h3 class="content__subtitle">Software Engineer</h2>
+      </div>
+</script>
 
-  <script type="text/html" id="contact">
-    <h1><%= heading %></h1>
-    <a href="https://www.linkedin.com/in/jchiefelk/">LinkedIn</a>
-  </script>
+<script type="text/html" id="work">
+          <div class="content__inner">
+              <h1><%= heading %></h1>
+              <a class="bodylinks" href="https://www.skc.edu/">Salish & Kootenai College</a>
+              <a class="bodylinks" href="http://activily.com/">Activily</a>
+              <a class="bodylinks" href="http://www.santacruzsentinel.com/article/NE/20150430/NEWS/150439971">KinaTouch</a>
+          </div>
+</script>
+
+<script type="text/html" id="opensource">
+        <div class="content__inner">
+          <h1><%= heading %></h1>
+          <a class="bodylinks" href="https://github.com/jchiefelk">Github</a>
+        </div>
+</script>
+
+<script type="text/html" id="contact">
+        <div class="content__inner">
+          <h1><%= heading %></h1>
+          <a class="bodylinks" href="https://www.linkedin.com/in/jchiefelk/">LinkedIn</a>
+        </div>
+</script>
 </head>
 
-<header class="header">
-  <a href="#" class="logo">Jackson Chief Elk</a>
-  <input class="menu-btn" type="checkbox" id="menu-btn" />
-  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-  <ul class="menu">
-    <li><a href="#/work">Work</a></li>
-    <li><a href="#teaching">Teaching</a></li>
-    <li><a href="#/opensource">Github</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</header>
 
+<body class="demo-4">
+  <header class="header">
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <li><a href="#/work">Work</a></li>
+      <li><a href="#/opensource">Github</a></li>
+      <li><a href="#/contact">Contact</a></li>
+    </ul>
+  </header>
 
-<body>
-<div class="routes">
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#/work">Work</a></li>
-    <li><a href="#/opensource">Open Source Project</a></li>
-    <li><a href="#/contact">Contact</a></li>
-  </ul>
-</div>
-  <div id="view"></div>
-  <script>
-    route('/', 'home', function () {
-      this.heading= 'Web and Mobile Engineer, and STEM Education';
-    });
-    route('/work', 'work', function () {
-      this.heading = 'Professional Experience';
-    });
-    route('/opensource', 'opensource', function () {
-      this.heading = 'Open Source Work';
-    });
-    route('/contact','contact',function(){
-      this.heading = 'Contact';
-    });
-  </script>
-</body>
+    
+    <main>
+      <div class="content">
+        <canvas class="scene scene--full" id="scene"></canvas>
+        <div id="view"></div>
+      </div>
+    </main>
+
+    <script src="js/demo.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/perlin.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/demo4.js"></script>
+    <script>
+        route('/', 'home', function () {
+          this.heading= 'Web and Mobile Engineer, and STEM Educator';
+        });
+        route('/work', 'work', function () {
+          this.heading = 'Professional Work';
+        });
+        route('/opensource', 'opensource', function () {
+          this.heading = 'Open Source Projects';
+        });
+        route('/contact','contact',function(){
+          this.heading = 'Contact';
+        });
+    </script>
+  </body>
 </html>

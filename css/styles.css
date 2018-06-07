@@ -5,11 +5,36 @@ body {
 
 a {
   color: #000;
+  font-size: 1.2rem;
+}
+
+.bodylinks {
+  font-size: 1.25em;
+  color: var(--color-subtitle);
+  padding: 0 0.75em;
+  margin: 0;
+  letter-spacing: 0.5em;
+  text-indent: 0.5em;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.bodylinks:hover{
+  color: red;
 }
 
 div {
   display: flex;
   flex-direction: column;
+}
+
+li {
+   list-style-type: none;
+}
+
+h1 {
+  font-size: 2.2rem;
 }
 
 .routes {
